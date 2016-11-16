@@ -1,0 +1,25 @@
+@mixin ltr($property, $value, $baseValue: 0) {
+
+  &, &:ltr {
+    #{$property}-left: $value;
+    #{$property}-right: $baseValue;
+  }
+
+  &:rtl {
+    #{$property}-left: $baseValue;
+    #{$property}-right: $value;
+  }
+}
+
+@mixin rtl($property, $value, $baseValue: 0) {
+
+  &, &:ltr {
+    #{$property}-left: $baseValue;
+    #{$property}-right: $value;
+  }
+
+  &:rtl {
+    #{$property}-right: $baseValue;
+    #{$property}-left: $value;
+  }
+}

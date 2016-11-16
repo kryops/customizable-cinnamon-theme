@@ -1,0 +1,82 @@
+@import '../base/variables';
+
+#overview {
+  spacing: 12px;
+}
+
+.window-caption {
+  background-color: $overview-background;
+  color: $overview-text;
+
+  &#selected {
+    background-color: $overview-hover;
+    color: $overview-text;
+  }
+}
+
+
+.workspace-thumbnails-background {
+  border: $overview-border;
+  border-radius: $overview-border-radius $overview-border-radius 0px 0px;
+  background-color: $overview-background;
+
+  &:rtl {
+    border-radius: $overview-border-radius $overview-border-radius 0px 0px;
+  }
+}
+
+.workspace-add-button {
+  transition-duration: $transition-duration;
+
+  &:hover {
+    transition-duration: $transition-duration;
+  }
+}
+
+.workspace-thumbnail-indicator {
+  outline: $overview-border;
+  border: $overview-border;
+}
+
+.window-caption {
+  background: $overview-background;
+  border: $overview-border;
+  border-radius: $overview-border-radius;
+  font-size: $overview-font-size;
+}
+
+.window-close-area {
+  background-color: $overview-background;
+  border: $overview-border;
+  border-bottom-width: 0px;
+  border-radius: $overview-border-radius $overview-border-radius 0px 0px;
+}
+
+.overview-icon {
+  border-radius: $overview-border-radius;
+  border: $overview-border;
+  font-size: $overview-font-size;
+  color: $overview-text;
+  transition-duration: $transition-duration;
+}
+
+.expo-background {
+  background-gradient-start: $overview-background;
+  background-gradient-end: $overview-background;
+  background: $overview-background;
+}
+
+.workspace-overview-background-shade {
+  background-color: $overview-background;
+}
+
+.expo-workspace-thumbnail-frame {
+  border: $overview-border;
+  background-color: $overview-background;
+
+  &#active {
+    border: $overview-border;
+    background-color: $overview-hover;
+  }
+
+}

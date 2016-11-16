@@ -1,0 +1,24 @@
+@import '../base/variables';
+@import '../base/functions';
+
+.expo-workspaces-name-entry {
+  border-radius: $border-radius;
+  color: $color-text;
+  border: $border;
+  background-gradient-start: $color-background;
+  background-gradient-end: $color-background;
+  background: $color-background;
+  selected-color: invert($color-text);
+  caret-color: $color-text;
+  box-shadow: inset 0px 0px 0px rgba(0,0,0,0);
+
+  &#selected {
+    background-gradient-start: lightenOrDarken($color-background, 10%);
+    background-gradient-end: lightenOrDarken($color-background, 10%);
+    color: $color-text;
+  }
+
+  &:focus {
+    color: $color-text;
+  }
+}

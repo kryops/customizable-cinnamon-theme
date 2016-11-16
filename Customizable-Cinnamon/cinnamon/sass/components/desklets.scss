@@ -1,0 +1,41 @@
+@import '../base/variables';
+
+.desklet {
+  color: $desklet-text;
+
+  &:highlight, &:highlight-with-borders, &:highlight-with-borders-and-header {
+    background-color: $color-highlight;
+  }
+}
+
+.desklet-with-borders {
+  border: $desklet-border;
+  background-color: $desklet-background;
+  color: $desklet-text;
+  border-radius-bottomleft: $desklet-border-radius;
+  border-radius-bottomright: $desklet-border-radius;
+  border-radius-topleft: $desklet-border-radius;
+  border-radius-topright: $desklet-border-radius;
+}
+
+.desklet-with-borders-and-header {
+  border: $desklet-border;
+  background-color: $desklet-background;
+  color: $desklet-text;
+  border-radius-bottomleft: $desklet-border-radius;
+  border-radius-bottomright: $desklet-border-radius;
+}
+
+.desklet-header {
+  border-radius-topleft: $desklet-border-radius;
+  border-radius-topright: $desklet-border-radius;
+  font-size: $desklet-font-size-header;
+  border: $desklet-border;
+  background-color: $desklet-background;
+  color: $desklet-text;
+}
+
+.desklet-drag-placeholder {
+  border: $desklet-drag-border;
+  background-color: $desklet-drag-background;
+}

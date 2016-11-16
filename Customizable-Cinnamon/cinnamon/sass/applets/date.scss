@@ -1,0 +1,75 @@
+.calendar-month-label {
+  color: $date-text;
+  font-size: $date-font-size;
+}
+
+.calendar-change-month-back,
+.calendar-change-month-forward {
+  border-radius: $date-border-radius;
+
+  &:hover {
+    background-color: $date-hover;
+  }
+
+  &:active {
+    background-color: $date-hover;
+  }
+}
+
+.datemenu-date-label {
+  font-size: $font-size-large;
+  color: $date-text;
+}
+
+.calendar-day-base {
+  font-size: $date-font-size;
+
+  &:hover {
+    background-color: $date-hover;
+    color: $date-text;
+  }
+
+  &:active {
+    background-color: $date-active;
+  }
+}
+
+.calendar-day-heading {
+  color: $date-text;
+}
+
+.calendar-week-number {
+  color: $date-text;
+}
+
+.calendar-day, .calendar-day:rtl, .calendar-day:ltr {
+  border: $date-border;
+  color: $date-text;
+  background-color: $date-background;
+
+  &.calendar-work-day {
+    background-color: $date-background;
+  }
+
+  &.calendar-nonwork-day {
+    background-color: $date-hover;
+    border: $date-border;
+  }
+
+  &.calendar-today {
+    background-image: none;
+    text-shadow: transparent 0px 0px 0px;
+    color: $date-text;
+    background-color: $date-active;
+    border: $date-border;
+  }
+
+  &.calendar-day.calendar-other-month-day {
+    color: force_opacity($date-text, 0.5);
+    background-color: $date-background;
+  }
+
+  &.calendar-day-with-events {
+    color: $date-text;
+  }
+}

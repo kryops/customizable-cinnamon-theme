@@ -1,0 +1,33 @@
+@import 'base/original-theme';
+
+@import 'base/mixins';
+@import 'base/functions';
+
+@import 'custom-variables';
+
+@import 'base/variables';
+
+@import 'components/gnome-shell';
+@import 'components/buttons';
+@import 'components/popup-menu';
+@import 'components/panel';
+@import 'components/overview';
+@import 'components/notifications';
+@import 'components/alt-tab-switcher';
+@import 'components/modal-dialogs';
+@import 'components/menu';
+@import 'components/applets';
+@import 'components/desklets';
+@import 'components/about';
+@import 'components/workspace-osd';
+
+@import 'applets/panel-launchers';
+@import 'applets/date';
+@import 'applets/keyboard';
+@import 'applets/notification';
+@import 'applets/sound';
+@import 'applets/user';
+@import 'applets/window-list';
+@import 'applets/workspace-switcher';
+
+@import 'custom-rules';

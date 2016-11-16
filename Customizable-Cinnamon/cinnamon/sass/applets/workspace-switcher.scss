@@ -1,0 +1,52 @@
+@import '../base/variables';
+
+.workspace-switcher {
+  padding-left: 3px;
+  padding-right: 3px;
+}
+
+.workspace-button {
+  width: 20px;
+  height: 10px;
+  color: $button-text;
+  border: $button-border;
+  transition-duration: $transition-duration;
+
+  &:outlined {
+    background: $button-background;
+    color: $button-text;
+    box-shadow: inset 0px 0px 0px 0px rgba(255,255,255, 0);
+  }
+}
+
+.workspace-graph {
+  padding: 3px;
+  spacing: 3px;
+
+  .workspace {
+    border: $border;
+    background-gradient-start: $color-background;
+    background-gradient-end: $color-background;
+
+    &:active {
+      border: $border;
+      background-gradient-start: lightenOrDarken($color-background, 5%);
+      background-gradient-end: lightenOrDarken($color-background, 5%);
+
+      .windows {
+        -active-window-background: lightenOrDarken($color-background, 15%);
+        -active-window-border: $color-border;
+        -inactive-window-background: lightenOrDarken($color-background, 5%);
+        -inactive-window-border: $color-border;
+      }
+    }
+
+    .windows {
+      -active-window-background: lightenOrDarken($color-background, 10%);
+      -active-window-border: $color-border;
+      -inactive-window-background: $color-background;
+      -inactive-window-border: $color-border;
+    }
+  }
+
+}

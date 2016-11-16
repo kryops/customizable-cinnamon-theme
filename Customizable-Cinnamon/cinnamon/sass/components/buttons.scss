@@ -1,0 +1,34 @@
+@import '../base/variables';
+
+.notification-button,
+.notification-icon-button,
+.modal-dialog-button,
+.sound-player-overlay StButton {
+
+  color: $button-text;
+  border: $button-border;
+  background-gradient-start: $button-background;
+  background-gradient-end: $button-background;
+  background: $button-background;
+  border-radius: $button-border-radius;
+  font-size: $button-font-size;
+
+  &:hover {
+    background-gradient-start: $button-hover;
+    background-gradient-end: $button-hover;
+    background: $button-hover;
+  }
+
+  &:pressed, &:active {
+    background-gradient-start: $button-pressed;
+    background-gradient-end: $button-pressed;
+    background: $button-pressed;
+  }
+
+  &:disabled {
+    color: $button-text-disabled;
+    background-gradient-start: $button-background-disabled;
+    background-gradient-end: $button-background-disabled;
+    background: $button-background-disabled;
+  }
+}

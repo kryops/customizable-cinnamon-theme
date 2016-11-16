@@ -1,0 +1,68 @@
+@import '../base/variables';
+
+.osd-window {
+  background: $color-background;
+  border: $border;
+  border-radius: $border-radius;
+  color: $color-text;
+}
+
+.osd-window .level {
+  background-color: $color-background;
+}
+
+.tile-preview,
+.tile-hud {
+  background-color: $color-background;
+  border: $border;
+}
+
+.tile-preview.snap,
+.tile-hud.snap {
+  background-color: $color-background;
+  border: $border;
+}
+
+.tile-hud:top {
+  border-top-width: 0px;
+  border-radius: 0px 0px $border-radius $border-radius;
+}
+
+.tile-hud:bottom {
+  border-bottom-width: 0px;
+  border-radius: $border-radius $border-radius 0px 0px;
+}
+
+.tile-hud:left {
+  border-left-width: 0px;
+  border-radius: 0px $border-radius $border-radius 0px;
+}
+
+.tile-hud:right {
+  border-right-width: 0px;
+  border-radius: $border-radius 0px 0px $border-radius;
+}
+
+.tile-hud:top-left {
+  border-top-width: 0px;
+  border-left-width: 0px;
+  border-radius: 0px 0px $border-radius 0px;
+}
+
+.tile-hud:top-right {
+  border-top-width: 0px;
+  border-right-width: 0px;
+  border-radius: 0px 0px 0px $border-radius;
+}
+
+.tile-hud:bottom-left {
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-radius: 0px $border-radius 0px 0px;
+}
+
+.tile-hud:bottom-right {
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-radius: $border-radius 0px 0px 0px;
+}

@@ -1,0 +1,87 @@
+@import '../base/mixins';
+@import '../base/variables';
+
+.menu {
+  border-radius: $menu-border-radius;
+  background-color: $menu-background;
+  border: $menu-border;
+  color: $menu-text;
+  font-size: $menu-font-size;
+  min-width: 100px;
+}
+
+.menu-favorites-box {
+  padding: 0px;
+  border: $menu-border-favorites;
+  border-radius: $menu-border-radius;
+  background-gradient-start: $menu-background-favorites;
+  background-gradient-end: $menu-background-favorites;
+  background: $menu-background-favorites;
+  transition-duration: $transition-duration;
+}
+
+.menu-favorites-button:hover,
+.menu-application-button-selected,
+.menu-category-button-selected {
+  color: $color-text;
+  background-gradient-start: $menu-hover;
+  background-gradient-end: $menu-hover;
+  background: $menu-hover;
+  box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0);
+  border: $menu-border;
+  border-radius: $menu-border-radius;
+}
+
+.menu-favorites-button:hover {
+  padding: 10px-$border-width;
+}
+
+.menu-places-box {
+  border: $menu-border;
+}
+
+.menu-category-button-greyed {
+  color: $color-disabled;
+}
+
+.menu-category-button-button:hover {
+  background-color: $menu-hover;
+  border-radius: $menu-border-radius;
+}
+
+#menu-search-entry {
+  border-radius: $menu-border-radius;
+  color: $menu-text;
+  border: $menu-border;
+  background-gradient-start: $menu-background;
+  background-gradient-end: $menu-background;
+  background: $menu-background;
+  selected-color: invert($menu-text);
+  caret-color: $menu-text;
+  height: 20px;
+  width: 535px;
+  transition-duration: $transition-duration;
+  box-shadow: 0px 0px 0px transparent;
+
+  &:focus, &:hover {
+    border: $menu-border;
+    background-gradient-start: $menu-hover;
+    background-gradient-end: $menu-hover;
+    background: $menu-hover;
+  }
+
+  &:hover {
+    transition-duration: $transition-duration;
+  }
+
+  &:focus {
+    color: $menu-text;
+    font-weight: normal;
+    transition-duration: $transition-duration;
+  }
+}
+
+.menu-search-entry-icon {
+  icon-size: 1em;
+  color: $menu-text;
+}

@@ -1,0 +1,73 @@
+@import '../base/variables';
+@import '../base/functions';
+
+#panel {
+  color: $panel-text;
+  background: $panel-background;
+  font-size: $panel-font-size;
+  height: $panel-height;
+
+  &:highlight {
+    background-color: $panel-background-highlight;
+  }
+}
+
+.panel-dummy {
+  background-color: force_opacity($panel-background, 0.5);
+
+  &:entered {
+    background-color: force_opacity($panel-background-highlight, 0.5);
+  }
+}
+
+.panelLeft:dnd {
+  background-color: $panel-edit-left;
+}
+
+.panelCenter:dnd {
+  background-color: $panel-edit-center;
+}
+
+.panelRight:dnd {
+  background-color: $panel-edit-right;
+}
+
+.panel-status-button {
+  border: $button-border;
+  color: $color-text;
+
+  &:hover {
+    color: $color-text;
+  }
+}
+
+.system-status-icon {
+  icon-size: $panel-icon-size;
+}
+
+.panel-corner {
+  -panel-corner-background-color: $panel-background;
+  -panel-corner-outer-border-color: $color-border;
+
+  &:active, &:overview, &:focus {
+    -panel-corner-inner-border-color: $color-active;
+  }
+}
+
+.panel-button {
+  color: $panel-text;
+  transition-duration: $transition-duration;
+
+  &:hover {
+    color: $panel-text;
+    text-shadow: transparent 0px 0px 0px;
+  }
+
+  &:active, &:checked, &:focus, &:overview {
+
+    > .system-status-icon {
+      icon-shadow: transparent 0px 0px 0px;
+    }
+
+  }
+}

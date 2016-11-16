@@ -1,0 +1,81 @@
+@import '../base/variables';
+@import '../base/mixins';
+
+.modal-dialog {
+  font-size: $dialog-font-size;
+  border-radius: $dialog-border-radius;
+  background-color: $dialog-background;
+  border: $dialog-border;
+  color: $dialog-text;
+}
+
+.info-osd {
+  border-radius: $dialog-border-radius;
+  background-color: $dialog-background;
+  border: $dialog-border;
+  color: $dialog-text;
+}
+
+.run-dialog-label {
+  font-size: $dialog-font-size;
+  color: $dialog-text;
+}
+
+.run-dialog-error-label {
+  font-size: $dialog-font-size;
+  color: $dialog-text;
+}
+
+.run-dialog-entry {
+  font-size: $dialog-font-size;
+  color: $dialog-text;
+  selection-background-color: $dialog-text;
+  selected-color: invert($dialog-text);
+}
+
+.run-dialog {
+  border-radius: $dialog-border-radius;
+}
+
+.lightbox {
+  background-color: $dialog-background-backdrop;
+}
+
+.flashspot {
+  background-color: $dialog-background-backdrop;
+}
+
+.show-processes-dialog-subject,
+.mount-question-dialog-subject {
+  font-size: $dialog-font-size;
+  color: $dialog-text;
+}
+
+.show-processes-dialog-description,
+.mount-question-dialog-description {
+  font-size: $dialog-font-size;
+  color: $dialog-text;
+}
+
+.show-processes-dialog-app-list {
+  font-size: $dialog-font-size;
+}
+
+.show-processes-dialog-app-list-item {
+  color: $dialog-text;
+
+  &:hover {
+    color: $dialog-text;
+  }
+}
+
+.show-processes-dialog-app-list-item-name {
+  font-size: $dialog-font-size;
+}
+
+#LookingGlassDialog {
+  background-color: $dialog-background;
+  border: $dialog-border;
+  border-radius: $dialog-border-radius;
+  color: $dialog-text;
+}

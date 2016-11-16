@@ -1,0 +1,19 @@
+@function force_opacity($color, $opacity) {
+  @return rgba(red($color), green($color), blue($color), $opacity);
+}
+
+@function lightenOrDarken($color, $amount) {
+  @if (lightness($color) > 50) {
+    @return darken($color, $amount);
+  } @else {
+    @return lighten($color, $amount);
+  }
+}
+
+@function lightnessSwitch($background, $light, $dark) {
+  @if (lightness($background) > 50) {
+    @return $light;
+  } @else {
+    @return $dark;
+  }
+}

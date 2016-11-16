@@ -1,0 +1,71 @@
+@import '../base/variables';
+
+stage {
+  font-family: $font-family;
+}
+
+
+StScrollBar {
+
+  StBin#trough {
+    background-color: $scroll-background;
+    border: $scroll-border;
+    border-radius: $scroll-border-radius;
+    box-shadow: inset 0px 0px 0px rgba(0,0,0,0);
+  }
+
+  StButton {
+
+    &#vhandle, &#hhandle {
+      background-color: $scroll-handle;
+      border: $scroll-border;
+      border-radius: $scroll-border-radius;
+      box-shadow: inset 0px 0px 0px rgba(0,0,0,0);
+
+      &:hover {
+        background-color: $scroll-hover;
+      }
+    }
+
+    &#vhandle {
+      background-image: none;
+    }
+
+    &#hhandle {
+      background-image: none;
+    }
+  }
+
+}
+
+StScrollView {
+
+  StScrollBar {
+    min-width: $scroll-width;
+    min-height: $scroll-width;
+  }
+
+}
+
+.separator {
+  -gradient-start: $color-separator;
+  -gradient-end: $color-separator;
+}
+
+.slider {
+  -slider-background-color: $slider-background;
+  -slider-border-color: $slider-border;
+  -slider-active-background-color: $slider-background-active;
+  -slider-active-border-color: $slider-border-active;
+  -slider-border-width: $border-width;
+}
+
+#Tooltip {
+  border: $tooltip-border;
+  border-radius: $tooltip-border-radius;
+  background-gradient-end: $tooltip-background;
+  background-gradient-start: $tooltip-background;
+  background: $tooltip-background;
+  color: $tooltip-text;
+  font-size: $tooltip-font-size;
+}

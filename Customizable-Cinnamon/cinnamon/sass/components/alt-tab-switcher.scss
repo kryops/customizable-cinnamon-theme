@@ -1,0 +1,43 @@
+@import '../base/variables';
+
+.switcher-list {
+  background: $switcher-background;
+  border: $switcher-border;
+  border-radius: $switcher-border-radius;
+  font-size: $switcher-font-size;
+  color: $switcher-text;
+
+  .item-box {
+    border-radius: $switcher-border-radius;
+
+    &:outlined {
+      border: $switcher-border;
+    }
+
+    &:selected {
+      background: $switcher-item-selected;
+    }
+  }
+
+  .separator {
+    background: $switcher-item-selected;
+  }
+}
+
+.thumbnail-scroll-gradient-left,
+.thumbnail-scroll-gradient-right {
+  background-gradient-start: force_opacity($switcher-background, 1);
+  background-gradient-end: force_opacity($switcher-background, 0);
+}
+
+.switcher-arrow {
+  color: $switcher-item-selected;
+
+  &:highlighted {
+    color: force_opacity($switcher-item-selected, 1);
+  }
+}
+
+.switcher-preview-backdrop {
+  background-color: $switcher-item-selected;
+}

@@ -1,0 +1,148 @@
+@import 'functions';
+
+/* global variables */
+
+$base-color: rgba(50,50,50,0.92) !default;
+$base-accent-color: lightnessSwitch($base-color, #333, #fff) !default;
+$base-accent-strength: 0.14 !default;
+
+$font-family: Droid Sans, sans, sans-serif !default;
+$font-size: 9.5pt !default;
+$font-size-large: $font-size+1pt !default;
+$font-size-small: $font-size - 1.5pt !default;
+
+$color-text: lightnessSwitch($base-color, #333, #fff) !default;
+$color-background: $base-color !default;
+$color-border: force_opacity($base-accent-color, $base-accent-strength) !default;
+$color-hover: force_opacity($base-accent-color, $base-accent-strength/2) !default;
+$color-active: force_opacity($base-accent-color, $base-accent-strength) !default;
+$color-separator: force_opacity($base-accent-color, $base-accent-strength/2) !default;
+$color-disabled: force_opacity(lightenOrDarken($color-text, 20%), 0.92) !default;
+$color-highlight: force_opacity(#aa5555, 0.2) !default;
+
+$border-radius: 8px !default;
+$border-width: 1px !default;
+$border: $border-width solid $color-border !default;
+
+$transition-duration: 150;
+
+/*** components ***/
+
+/* buttons */
+
+$button-text: $color-text !default;
+$button-text-disabled: darken($color-text, 20%) !default;
+$button-font-size: $font-size !default;
+$button-background: lightenOrDarken($color-background, 10%) !default;
+$button-background-disabled: lightenOrDarken($button-background, 10%) !default;
+$button-hover: lightenOrDarken($color-background, 20%) !default;
+$button-pressed: lightenOrDarken($color-background, 30%) !default;
+$button-border: $border !default;
+$button-border-radius: $border-radius/2 !default;
+
+/* menu */
+$menu-text: $color-text !default;
+$menu-background: $color-background !default;
+$menu-background-favorites: rgba(0,0,0,0) !default;
+$menu-border: $border !default;
+$menu-border-favorites: none !default;
+$menu-border-radius: $border-radius !default;
+$menu-font-size: $font-size !default;
+$menu-hover: $color-hover !default;
+
+/* panel */
+$panel-text: $color-text !default;
+$panel-background: $color-background !default;
+$panel-background-highlight: $color-highlight !default;
+$panel-font-size: $font-size-small !default;
+$panel-edit-left: rgba(255,0,0,0.15) !default;
+$panel-edit-center: rgba(0,255,0,0.15) !default;
+$panel-edit-right: rgba(0,0,255,0.15) !default;
+$panel-height: 48px !default;
+$panel-icon-size: 20px !default;
+$panel-hover: $color-hover !default;
+
+/* alt-tab switcher */
+$switcher-background: $color-background !default;
+$switcher-border: $border !default;
+$switcher-border-radius: $border-radius !default;
+$switcher-font-size: $font-size-small !default;
+$switcher-text: $color-text !default;
+$switcher-item-selected: $color-hover !default;
+
+/* applets */
+$applet-text: transparentize($color-text, 0.2) !default;
+$applet-text-hover: $color-text !default;
+$applet-background-hover: $color-hover !default;
+
+/* desklets */
+$desklet-background: $color-background  !default;
+$desklet-text: $color-text  !default;
+$desklet-border: $border  !default;
+$desklet-border-radius: $border-radius  !default;
+$desklet-font-size-header: $font-size-large  !default;
+$desklet-drag-background: rgba(109,170, 0, 0.3)  !default;
+$desklet-drag-border: 1px solid #6daa00  !default;
+
+/* scroll view */
+$scroll-border: $border  !default;
+$scroll-border-radius: $border-radius/2  !default;
+$scroll-background: transparent  !default;
+$scroll-width: 12px  !default;
+$scroll-handle: $color-hover  !default;
+$scroll-hover: $color-active !default;
+
+/* tooltip */
+$tooltip-text: $color-text  !default;
+$tooltip-border: $border  !default;
+$tooltip-border-radius: $border-radius/2  !default;
+$tooltip-background: $color-background  !default;
+$tooltip-font-size: $font-size  !default;
+
+/* slider */
+$slider-background: $color-hover  !default;
+$slider-background-active: force_opacity($color-text, 0.5)  !default;
+$slider-border: $color-border  !default;
+$slider-border-active: $color-border  !default;
+
+/* modal dialogs */
+$dialog-background: $color-background !default;
+$dialog-background-backdrop: force_opacity($color-background, 0.5) !default;
+$dialog-text: $color-text !default;
+$dialog-font-size: $font-size !default;
+$dialog-border: $border !default;
+$dialog-border-radius: $border-radius !default;
+
+/* notifications */
+$notification-background: $color-background !default;
+$notification-hover: lightenOrDarken($color-background, 10%) !default;
+$notification-text: $color-text !default;
+$notification-font-size: $font-size !default;
+$notification-border: $border !default;
+$notification-border-radius: $border-radius !default;
+
+/* overview */
+$overview-background: $color-background !default;
+$overview-hover: lightenOrDarken($color-background, 10%) !default;
+$overview-text: $color-text !default;
+$overview-font-size: $font-size !default;
+$overview-border: $border !default;
+$overview-border-radius: $border-radius !default;
+
+/* window list */
+$windowlist-background: transparent !default;
+$windowlist-hover: $color-hover !default;
+$windowlist-active: $color-active !default;
+$windowlist-text: $color-text !default;
+$windowlist-font-size: $font-size !default;
+$windowlist-border: $border !default;
+$windowlist-border-radius: $border-radius !default;
+
+/* date / calendar */
+$date-background: transparent !default;
+$date-hover: $color-hover !default;
+$date-active: $color-active !default;
+$date-text: $color-text !default;
+$date-font-size: $font-size-small !default;
+$date-border: 0px solid rgba(0,0,0,0) !default;
+$date-border-radius: $border-radius/2 !default;

@@ -1,0 +1,11 @@
+{
+   "cinnamon-theme": {
+        "name" : "Customizable-Cinnamon",
+        "author" : "Michael Strobel",
+        "version" : "1.0.0",
+        "type" : "custom",
+        "thumbnail" : "thumbnail.png",
+        "url" : "https://github.com/kryops/customizable-cinnamon-theme"
+    }
+}
+

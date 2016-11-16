@@ -1,0 +1,32 @@
+@import '../base/variables';
+
+#keyboard {
+  background-color: $color-background;
+}
+
+.keyboard-key {
+  background-gradient-start: $button-background;
+  background-gradient-end: $button-background;
+  background: $button-background;
+  border-radius: $button-border-radius;
+  border: $button-border;
+  color: $button-text;
+
+  &:grayed {
+    color: $button-text-disabled;
+  }
+
+  &:checked, &:hover {
+    background: $button-hover;
+  }
+
+  &:active {
+    background: $button-hover;
+  }
+}
+
+.keyboard-subkeys {
+  color: $button-text;
+  -arrow-border-radius: $button-border-radius;
+  -arrow-background-color: $button-background;
+}

@@ -1,0 +1,48 @@
+@import '../base/variables';
+@import '../base/functions';
+
+.panel-launchers {
+  padding-left: 7px;
+  spacing: 1px;
+
+  .launcher:hover {
+    background-gradient-start: $panel-hover;
+    background-gradient-end: $panel-hover;
+    background-color: $panel-hover;
+    border-bottom-width: 0px;
+  }
+}
+
+.launcher {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-bottom-width: 0px;
+  transition-duration: $transition-duration;
+}
+
+.panel-launcher-add-dialog-entry {
+  border-radius: $border-radius/2;
+  color: $panel-text;
+  border: $border;
+  background-gradient-start: $color-background;
+  background-gradient-end: $color-background;
+  selected-color: invert($color-text);
+  caret-color: $color-text;
+  transition-duration: $transition-duration;
+  box-shadow: inset 0px 0px 0px rgba(0,0,0,0);
+
+  &:focus, &:hover {
+    border: $border;
+    background-gradient-start: lightenOrDarken($color-background, 10%);
+    background-gradient-end: lightenOrDarken($color-background, 10%);
+  }
+
+  &:hover {
+    transition-duration: $transition-duration;
+  }
+
+  &:focus {
+    color: $panel-text;
+    transition-duration: $transition-duration;
+  }
+}

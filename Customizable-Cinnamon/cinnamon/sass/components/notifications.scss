@@ -1,0 +1,38 @@
+@import '../base/variables';
+
+#notification {
+  font-size: $notification-font-size;
+  border-radius: $notification-border-radius;
+  border: $notification-border;
+  background-gradient-start: $notification-background;
+  background-gradient-end: $notification-background;
+  background-color: $notification-background;
+  color: $notification-text;
+
+  &.multi-line-notification {
+    color: $notification-text;
+  }
+
+  StEntry {
+    padding: 4px;
+    border-radius: $notification-border-radius;
+    color: $notification-text;
+    selected-color: invert($notification-text);
+    border: $notification-border;
+    background-gradient-start: $notification-background;
+    background-gradient-end: $notification-background;
+    background-color: $notification-background;
+    transition-duration: $transition-duration;
+    box-shadow: inset 0px 0px 0px rgba(0,0,0,0);
+    caret-color: $notification-text;
+
+    &:focus {
+      border: $notification-border;
+      color: $notification-text;
+      background-gradient-start: $notification-hover;
+      background-gradient-end: $notification-hover;
+      caret-color: $notification-text;
+      selection-background-color: invert($notification-text);
+    }
+  }
+}

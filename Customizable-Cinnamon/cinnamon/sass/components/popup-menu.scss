@@ -1,0 +1,68 @@
+@import '../base/variables';
+@import '../base/functions';
+
+.popup-menu-boxpointer {
+  -arrow-border-radius: $border-radius;
+  -arrow-background-color: $menu-background;
+  -arrow-border-width: $border-width;
+  -arrow-border-color: $color-border;
+}
+
+.popup-menu {
+  color: $menu-text;
+  font-size: $menu-text;
+}
+
+.popup-submenu-menu-item:open {
+  background-color: $color-hover;
+}
+
+.popup-sub-menu {
+  background-gradient-start: $menu-background;
+  background-gradient-end: $menu-background;
+  background: $menu-background;
+
+  StScrollBar {
+    StBin {
+      &#vhandle {
+        background-color: $scroll-handle;
+      }
+    }
+  }
+}
+
+
+.popup-combo-menu {
+  background-color: $menu-background;
+  color: $menu-text;
+  font-size: $menu-font-size;
+  border: $menu-border;
+  border-radius: $menu-border-radius;
+}
+
+.popup-menu-item {
+  &:active {
+    background-color: $menu-hover;
+  }
+
+  &:insensitive {
+    color: force_opacity($color-text, 0.5);
+  }
+}
+
+.popup-separator-menu-item {
+  -gradient-start: $color-separator;
+  -gradient-end: $color-separator;
+}
+
+.popup-slider-menu-item {
+  -slider-background-color: $slider-background;
+  -slider-border-color: $slider-border;
+  -slider-active-background-color: $slider-background-active;
+  -slider-active-border-color: $slider-border-active;
+  -slider-border-width: $border-width;
+}
+
+.popup-inactive-menu-item {
+  color: $color-disabled;
+}

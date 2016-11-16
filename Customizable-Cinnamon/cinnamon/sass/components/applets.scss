@@ -1,0 +1,45 @@
+@import '../base/variables';
+
+.applet-separator-line {
+  background: $color-separator;
+}
+
+.applet-separator-line-vertical {
+  border: 0px solid $color-separator;
+}
+
+.applet-box {
+  color: $applet-text;
+  transition-duration: $transition-duration;
+
+  &:hover {
+    color: $applet-text-hover;
+    background: $applet-background-hover;
+
+    > .applet-label {
+      color: $applet-text-hover;
+    }
+
+    .applet-icon {
+      color: $applet-text-hover;
+    }
+  }
+
+  &:highlight {
+    background-color: $color-highlight;
+  }
+}
+
+.applet-label {
+  color: $applet-text;
+  text-shadow: 0 0 0 transparent;
+}
+
+.applet-icon {
+  color: $applet-text;
+}
+
+.applet-box:hover .applet-icon {
+  color: $applet-text;
+  icon-shadow: transparent 0px 0px 0px;
+}

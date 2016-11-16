@@ -1,0 +1,45 @@
+@import '../base/variables';
+
+.window-list-box {
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  &.vertical {
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+  }
+}
+
+.window-list-item-box {
+  color: $windowlist-text;
+  background-gradient-start: $windowlist-background;
+  background-gradient-end: $windowlist-background;
+  background: $windowlist-background;
+  box-shadow: inset 0px 0px 0px 0px rgba(170,170,170,0);
+  border: $windowlist-border;
+  border-radius: $windowlist-border-radius;
+  transition-duration: $transition-duration;
+
+  &:hover {
+    background-gradient-start: $windowlist-hover;
+    background-gradient-end: $windowlist-hover;
+    background: $windowlist-hover;
+    box-shadow: inset 0px 0px 0px 0px rgba(170,170,170,0);
+    border-radius: $windowlist-border-radius;
+  }
+
+  &:active, &:checked, &:focus {
+    background-gradient-start: $windowlist-active;
+    background-gradient-end: $windowlist-active;
+    background: $windowlist-active;
+    box-shadow: inset 0px 0px 0px 0px rgba(170,170,170,0);
+    border-radius: $windowlist-border-radius;
+  }
+}
+
+.window-list-item-demands-attention {
+  background-gradient-start: $color-highlight;
+  background-gradient-end: $color-highlight;
+}

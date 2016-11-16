@@ -1,0 +1,34 @@
+@import '../base/variables';
+
+.sound-player {
+
+  StButton {
+    color: $color-text;
+
+    &:hover, &:active {
+      color: $color-text;
+    }
+  }
+
+  .slider {
+    -slider-background-color: $slider-background;
+    -slider-border-color: $slider-border;
+    -slider-active-background-color: $slider-background-active;
+    -slider-active-border-color: $slider-border-active;
+    -slider-border-width: $border-width;
+  }
+}
+
+.sound-player-overlay {
+  background-color: $color-background;
+  color: $color-text;
+  border-top: $border;
+
+  StButton {
+    border-radius: $button-border-radius;
+  }
+}
+
+.sound-player-generic-coverart {
+  background: $color-background;
+}
