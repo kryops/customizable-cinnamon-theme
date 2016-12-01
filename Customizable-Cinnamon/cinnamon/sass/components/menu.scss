@@ -7,7 +7,6 @@
   border: $menu-border;
   color: $menu-text;
   font-size: $menu-font-size;
-  min-width: 100px;
 }
 
 .menu-favorites-box {
@@ -59,7 +58,6 @@
   selected-color: invert($menu-text);
   caret-color: $menu-text;
   height: 20px;
-  width: 535px;
   transition-duration: $transition-duration;
   box-shadow: 0px 0px 0px transparent;
 
