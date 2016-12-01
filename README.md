@@ -43,7 +43,7 @@ npm run reload
 
 The default values for colors, borders and fonts are configured in `sass/base/variables.scss`.
 
-You can override these values with your own in `sass/custom.variables.scss`.
+You can override these values with your own in `sass/custom-variables.scss`.
 
 ### Main variables
 
