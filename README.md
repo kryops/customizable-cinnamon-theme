@@ -119,6 +119,8 @@ $font-family: Ubuntu;
 $border-width: 0px;
 ```
 
+![Example Ubuntu](assets/screenshot-ubuntu.png)
+
 ### Windows 10
 
 ```scss
@@ -127,6 +129,8 @@ $base-accent-strength: 0.4;
 $border-radius: 0px;
 $border-width: 0px;
 ```
+
+![Example Windows 10](assets/screenshot-win10.png)
 
 ## Credits
 
