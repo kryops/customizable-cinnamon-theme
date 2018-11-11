@@ -36,8 +36,11 @@
 }
 
 .menu-favorites-button:hover {
-  padding: 10px-$border-width;
-  height: 32px - ($border-width * 2);
+  padding-top: 9px-$border-width;
+  padding-bottom: 9px-$border-width;
+  padding-left: 11px-$border-width;
+  padding-right: 11px-$border-width;
+  margin: 2px 0;
 }
 
 .menu-places-box {

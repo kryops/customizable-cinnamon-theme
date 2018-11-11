@@ -12,7 +12,7 @@
   }
 }
 
-.window-list-item-box {
+.window-list-item-box, .grouped-window-list-item-box {
   color: $windowlist-text;
   background-gradient-start: $windowlist-background;
   background-gradient-end: $windowlist-background;
