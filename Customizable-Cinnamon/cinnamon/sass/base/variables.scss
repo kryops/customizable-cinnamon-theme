@@ -8,8 +8,8 @@ $base-accent-strength: 0.14 !default;
 
 $font-family: Droid Sans, sans, sans-serif !default;
 $font-size: 9.5pt !default;
-$font-size-large: $font-size+1pt !default;
-$font-size-small: $font-size - 1.5pt !default;
+$font-size-large: $font-size + 1pt !default;
+$font-size-small: $font-size - 1pt !default;
 
 $color-text: lightnessSwitch($base-color, #333, #fff) !default;
 $color-background: $base-color !default;
