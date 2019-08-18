@@ -848,6 +848,7 @@ StScrollBar StButton#vhandle:hover {
 }
 .modal-dialog-button-box {
   spacing: 21px;
+  padding-top: 21px;
 }
 .modal-dialog-button {
   border-radius: 18px;
@@ -884,6 +885,7 @@ StScrollBar StButton#vhandle:hover {
 .run-dialog-label {
   font-size: 9pt;
   color: white;
+  padding-bottom: 15px;
 }
 .run-dialog-error-label {
   font-size: 9pt;
@@ -909,7 +911,7 @@ StScrollBar StButton#vhandle:hover {
   border-radius: 16px;
   padding-right: 21px;
   padding-left: 21px;
-  padding-bottom: 15px;
+  padding-bottom: 0;
   padding-top: 15px;
 }
 .lightbox {
@@ -1512,6 +1514,26 @@ opacity: 0.5;
 }
 
 /* ===================================================================
+* Spacer applet
+* ===================================================================*/
+.spacer-box {
+  border-radius: 1px;
+  border: 1px solid transparent;
+}
+
+.spacer-box:highlight {
+  background-color: #aa5555;
+}
+
+.spacer-box.vertical {
+}
+
+.spacer-box.edit-mode {
+  border-radius: 1px;
+  border: 1px symbolic;
+}
+
+/* ===================================================================
 * Workspace Switcher applet (workspaceSwitcher.js)
 * ===================================================================*/
 /* Controls the styling when using the "Simple buttons" option */
@@ -1541,6 +1563,10 @@ opacity: 0.5;
   background: #cccccc;
   color: #555555;
   box-shadow: inset 0px 0px 8px 1px rgba(255,255,255, 0.7);
+}
+
+.workspace-button:shaded {
+  color: #13191c;
 }
 
 /* Controls the style when using the "Visual representation" option */
