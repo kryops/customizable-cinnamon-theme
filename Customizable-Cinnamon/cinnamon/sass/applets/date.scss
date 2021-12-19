@@ -19,6 +19,8 @@
 .datemenu-date-label {
   font-size: $font-size-large;
   color: $date-text;
+  text-align: center;
+  padding: 5px 0;
 }
 
 .calendar-day-base {
@@ -62,6 +64,10 @@
     color: $date-text;
     background-color: $date-active;
     border: $date-border;
+  }
+
+  &.calendar-not-today {
+    color: $date-text;
   }
 
   &.calendar-day.calendar-other-month-day {

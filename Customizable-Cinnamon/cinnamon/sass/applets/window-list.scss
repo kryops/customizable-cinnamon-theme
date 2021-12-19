@@ -22,7 +22,7 @@
   border-radius: $windowlist-border-radius;
   transition-duration: $transition-duration;
 
-  &:hover {
+  &:hover, &:active:hover {
     background-gradient-start: $windowlist-hover;
     background-gradient-end: $windowlist-hover;
     background: $windowlist-hover;
