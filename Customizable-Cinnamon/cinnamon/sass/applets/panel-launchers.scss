@@ -21,7 +21,7 @@
 }
 
 .panel-launcher-add-dialog-entry {
-  border-radius: $border-radius/2;
+  border-radius: calc($border-radius / 2);
   color: $panel-text;
   border: $border;
   background-gradient-start: $color-background;

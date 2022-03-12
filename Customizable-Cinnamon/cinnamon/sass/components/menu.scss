@@ -29,17 +29,17 @@
   box-shadow: inset 0px 0px 0px 0px rgba(255,255,255,0);
   border: $menu-border;
   border-radius: $menu-border-radius;
-  padding-top: 7px-$border-width;
-  padding-bottom: 7px-$border-width;
-  padding-left: 7px-$border-width;
-  padding-right: 7px-$border-width;
+  padding-top: calc(7px - $border-width);
+  padding-bottom: calc(7px - $border-width);
+  padding-left: calc(7px - $border-width);
+  padding-right: calc(7px - $border-width);
 }
 
 .menu-favorites-button:hover {
-  padding-top: 9px-$border-width;
-  padding-bottom: 9px-$border-width;
-  padding-left: 11px-$border-width;
-  padding-right: 11px-$border-width;
+  padding-top: calc(9px - $border-width);
+  padding-bottom: calc(9px - $border-width);
+  padding-left: calc(11px - $border-width);
+  padding-right: calc(11px - $border-width);
   margin: 2px 0;
 }
 

@@ -5,14 +5,14 @@
   "repository": "https://github.com/kryops/customizable-cinnamon-theme.git",
   "scripts": {
     "link": "ln -s -r -t ~/.themes ./Customizable-Cinnamon",
-    "build": "node-sass Customizable-Cinnamon/cinnamon/sass/cinnamon.scss Customizable-Cinnamon/cinnamon/cinnamon.css",
+    "build": "sass --no-source-map Customizable-Cinnamon/cinnamon/sass/cinnamon.scss Customizable-Cinnamon/cinnamon/cinnamon.css",
     "reload": "gsettings set org.cinnamon.theme name default && gsettings set org.cinnamon.theme name Customizable-Cinnamon",
     "watch": "watch 'npm run build && npm run reload' Customizable-Cinnamon/cinnamon/sass"
   },
   "author": "Michael Strobel",
   "license": "GPL-3.0",
   "devDependencies": {
-    "node-sass": "^7.0.0",
+    "sass": "^1.49.9",
     "watch": "^1.0.1"
   }
 }

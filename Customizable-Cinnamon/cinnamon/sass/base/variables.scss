@@ -14,9 +14,9 @@ $font-size-small: $font-size - 1pt !default;
 $color-text: lightnessSwitch($base-color, #333, #fff) !default;
 $color-background: $base-color !default;
 $color-border: force_opacity($base-accent-color, $base-accent-strength) !default;
-$color-hover: force_opacity($base-accent-color, $base-accent-strength/2) !default;
+$color-hover: force_opacity($base-accent-color, calc($base-accent-strength / 2)) !default;
 $color-active: force_opacity($base-accent-color, $base-accent-strength) !default;
-$color-separator: force_opacity($base-accent-color, $base-accent-strength/2) !default;
+$color-separator: force_opacity($base-accent-color, calc($base-accent-strength / 2)) !default;
 $color-disabled: force_opacity(lightenOrDarken($color-text, 20%), 0.92) !default;
 $color-highlight: force_opacity(#aa5555, 0.2) !default;
 
@@ -38,7 +38,7 @@ $button-background-disabled: lightenOrDarken($button-background, 10%) !default;
 $button-hover: lightenOrDarken($color-background, 20%) !default;
 $button-pressed: lightenOrDarken($color-background, 30%) !default;
 $button-border: $border !default;
-$button-border-radius: $border-radius/2 !default;
+$button-border-radius: calc($border-radius / 2) !default;
 
 /* menu */
 $menu-text: $color-text !default;
@@ -86,7 +86,7 @@ $desklet-drag-border: 1px solid #6daa00  !default;
 
 /* scroll view */
 $scroll-border: $border  !default;
-$scroll-border-radius: $border-radius/2  !default;
+$scroll-border-radius: calc($border-radius / 2)  !default;
 $scroll-background: transparent  !default;
 $scroll-width: 12px  !default;
 $scroll-handle: $color-hover  !default;
@@ -95,7 +95,7 @@ $scroll-hover: $color-active !default;
 /* tooltip */
 $tooltip-text: $color-text  !default;
 $tooltip-border: $border  !default;
-$tooltip-border-radius: $border-radius/2  !default;
+$tooltip-border-radius: calc($border-radius / 2)  !default;
 $tooltip-background: $color-background  !default;
 $tooltip-font-size: $font-size  !default;
 
@@ -145,4 +145,4 @@ $date-active: $color-active !default;
 $date-text: $color-text !default;
 $date-font-size: $font-size-small !default;
 $date-border: 0px solid rgba(0,0,0,0) !default;
-$date-border-radius: $border-radius/2 !default;
+$date-border-radius: calc($border-radius / 2) !default;
