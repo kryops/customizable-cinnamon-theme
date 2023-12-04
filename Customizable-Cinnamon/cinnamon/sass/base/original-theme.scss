@@ -4,7 +4,7 @@
  */
  
  
-/* ###################################################################
+ /* ###################################################################
  * Section common with Gnome Shell
  * ... contains a few cinnamon specific styles (rare occurrences)
  * ###################################################################*/
@@ -1065,6 +1065,13 @@ StScrollBar StButton#vhandle:hover {
     font-size: 3em;
 }
 
+.monitor-label {
+    border-radius: 0;
+    color: #000000;
+    padding: 10px;
+    text-align: center;
+}
+
 /* ===================================================================
  * Run dialog
  * ===================================================================*/
@@ -1250,6 +1257,11 @@ StScrollBar StButton#vhandle:hover {
     padding-right: 7px;
     padding-bottom: 7px;
 }
+.menu-category-button:hover {
+    background-color: rgba(128,128,128,0.2);
+    border-radius: 4px;
+    border-image: none;
+}
 .menu-category-button-greyed {
     padding-top: 7px;
     padding-left: 7px;
@@ -1278,9 +1290,6 @@ StScrollBar StButton#vhandle:hover {
 }
 .menu-category-button-label:rtl {
     padding-right: 5px;
-
-}
-.menu-category-button-selected:hover {
 }
 /* Name and description of the currently hovered item in the menu
  * This appears on the bottom right hand corner of the menu*/
@@ -1323,7 +1332,6 @@ StScrollBar StButton#vhandle:hover {
     caret-color: rgb(128, 128, 128);
     caret-size: 1px;
     width: 250px;
-    height: 15px;
     transition-duration: 300;
     box-shadow: inset 0px 2px 4px rgba(0,0,0,0.6);
 }
@@ -1822,6 +1830,7 @@ StScrollBar StButton#vhandle:hover {
     color: #ccc;
     text-shadow: black 0px 0px 2px;
     transition-duration: 300;
+    text-align: center;
 }
 .panel-top .applet-box,
 .panel-bottom .applet-box {
