@@ -9,7 +9,7 @@
     "reload": "gsettings set org.cinnamon.theme name default && gsettings set org.cinnamon.theme name Customizable-Cinnamon",
     "watch": "watch 'npm run build && npm run reload' Customizable-Cinnamon/cinnamon/sass"
   },
-  "author": "Michael Strobel",
+  "author": "Michael Manzinger <michael@kryops.de>",
   "license": "GPL-3.0",
   "devDependencies": {
     "sass": "^1.57.1",

@@ -1,7 +1,7 @@
 {
    "cinnamon-theme": {
         "name" : "Customizable-Cinnamon",
-        "author" : "Michael Strobel",
+        "author" : "Michael Manzinger",
         "version" : "1.0.0",
         "type" : "custom",
         "thumbnail" : "thumbnail.png",
