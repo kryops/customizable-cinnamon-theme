@@ -1,2113 +1,1323 @@
-/*
- * ORIGINAL CINNAMON THEME
- * https://github.com/linuxmint/Cinnamon/blob/master/data/theme/cinnamon.css
- */
- 
- 
- /* ###################################################################
- * Section common with Gnome Shell
- * ... contains a few cinnamon specific styles (rare occurrences)
- * ###################################################################*/
- stage {
-}
-.cinnamon-link {
-    color: #0000ff;
-    text-decoration: underline;
-}
-.cinnamon-link:hover {
-    color: #0000e0;
-}
-.label-shadow {
-    color: rgba(0,0,0,0.5);
-}
-StScrollBar {
-    padding: 0px;
-}
-StScrollView.vfade {
-    -st-vfade-offset: 68px;
-}
-StScrollView StScrollBar {
-    min-width: 16px;
-    min-height: 16px;
-    padding: 2px;
-}
-
-StScrollBar StBin#trough {
-    background-color: rgba(0,0,0,0);
-    border: 1px solid #555555;
-    border-radius: 4px;
-}
-StScrollBar StButton#vhandle {
-    background-image: url("original-theme-assets/scroll-vhandle.svg");
-    background-color: rgba(204,204,204,0.3);
-    border: 1px solid #555555;
-    border-radius: 4px;
-}
-StScrollBar StButton#hhandle {
-    background-image: url("original-theme-assets/scroll-hhandle.svg");
-    background-color: rgba(204,204,204,0.3);
-    border: 1px solid #555555;
-    border-radius: 4px;
-}
-StScrollBar StButton#hhandle:hover,
-StScrollBar StButton#vhandle:hover {
-    background-color: rgba(204,204,204,0.5);
-}
-.separator {
-    -gradient-height: 2px;
-    -gradient-start: rgba(85,85,85,1);
-    -gradient-end: #555555;
-    -margin-horizontal: 1.5em;
-    height: 1em;
-}
-.slider {
-    height: 1em;
-    min-width: 15em;
-    -slider-height: 0.3em;
-    -slider-background-color: #666666;
-    -slider-border-color: #555555;
-    -slider-active-background-color: #CCCCCC;
-    -slider-active-border-color: #DDDDDD;
-    -slider-border-width: 1px;
-    -slider-handle-radius: 0.5em;
-}
-#Tooltip {
-    border: 1px solid rgba(212,185,67,1.0);
-    border-radius: 4px;
-    padding: 2px 12px;
-    background-gradient-end: rgba(251,234,159,0.9);
-    background-gradient-start: rgba(254,245,198,0.9);
-    background-gradient-direction: vertical;
-    color: #000000;
-    font-weight: normal;
-    text-align: center;
-}
-.ripple-pointer-location {
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
-  background-color: rgba(160,160,160,0.3);
-  box-shadow: 0 0 2px 2px rgba(160,160,160,1.0);
-}
-/* ===================================================================
- * Shared button properties
- * ===================================================================*/
-.notification-button, .notification-icon-button,
-.modal-dialog-button,
-.sound-player-overlay StButton {
-    color: white;
-    border: 1px solid #8b8b8b;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255, 255, 255, 0.2);
-    background-gradient-end: rgba(255, 255, 255, 0);
-}
-.notification-button:hover,
-.notification-icon-button:hover, .modal-dialog-button:hover,
-.sound-player-overlay StButton:hover {
-    background-gradient-start: rgba(255, 255, 255, 0.3);
-    background-gradient-end: rgba(255, 255, 255, 0.1);
-}
-.notification-button:focus,
-.notification-icon-button:focus,
-.modal-dialog-button:focus,
-.sound-player-overlay StButton:focus {
-    border: 2px solid #8b8b8b;
-}
-.notification-button:active, .notification-icon-button:active,
-.modal-dialog-button:active, .modal-dialog-button:pressed,
-.sound-player-overlay StButton:active {
-    background-gradient-start: rgba(255, 255, 255, 0);
-    background-gradient-end: rgba(255, 255, 255, 0.2);
-}
-/* ===================================================================
- * PopupMenu (popupMenu.js)
- * ===================================================================*/
- /* .popup-menu-boxpointer and .popup-menu are kept for compatibility
-    with cinnamon version under 3.2. Use .menu in version 3.2 and above */
-.popup-menu-boxpointer {
-    -arrow-border-radius: 8px;
-    -arrow-background-color: rgba(80,80,80,0.9);
-    -arrow-border-width: 2px;
-    -arrow-border-color: #a5a5a5;
-    -arrow-base: 24px;
-    -arrow-rise: 11px;
-}
-.popup-menu {
-    color: #ffffff;
-    min-width: 100px;
-}
-.menu {
+stage {
+    color: white; }
+  
+  #menu-search-entry, .expo-workspaces-name-entry, .prompt-dialog-password-entry, .run-dialog-entry {
+    min-height: 22px;
     border-radius: 8px;
-    background-color: rgba(80,80,80,0.9);
-    border-width: 2px;
-    border-color: #a5a5a5;
-    color: #ffffff;
-    min-width: 100px;
-}
-.popup-menu-arrow {
-    icon-size: 1.14em;
-}
-.popup-submenu-menu-item:open {
-    background-color: #4c4c4c;
-}
-.popup-sub-menu {
-    background-gradient-start: rgba(80,80,80,0.3);
-    background-gradient-end: rgba(80,80,80,0.7);
-    background-gradient-direction: vertical;
-}
-.popup-sub-menu .popup-menu-item:ltr {
-    padding-right: 1.75em;
-}
-.popup-sub-menu .popup-menu-item:rtl {
-    padding-left: 1.75em;
-}
-.popup-sub-menu StScrollBar {
-    padding: 4px;
-}
-.popup-sub-menu StScrollBar StBin#trough {
-    border-width: 0px;
-}
-.popup-sub-menu StScrollBar StBin#vhandle {
-    background-color: #4c4c4c;
-    border-width: 0px;
-}
-.popup-combo-menu {
-    background-color: rgba(0,0,0,0.9);
-    padding: 1em 0em;
-    color: #ffffff;
-    border: 1px solid #5f5f5f;
-    border-radius: 9px;
-}
-/* The remaining popup-menu sizing is all done in ems, so that if you
- * override .popup-menu.font-size, everything else will scale with it.
- */
-.popup-menu-content {
-    padding: 1em 0em;
-}
-.popup-menu-item {
-    padding: .4em 1.75em;
-    spacing: 1em;
-}
-.popup-menu-item:active {
-    background-color: #4c4c4c;
-}
-.popup-menu-item:insensitive {
-    color: #9f9f9f;
-}
-.popup-image-menu-item {
-}
-.popup-combobox-item {
-    spacing: 1em;
-}
-.popup-separator-menu-item {
-    -gradient-height: 2px;
-    -gradient-start: rgba(85,85,85,1);
-    -gradient-end: #555555;
-    -margin-horizontal: 1.5em;
-    height: 1em;
-}
-.popup-alternating-menu-item:alternate {
-    font-weight: bold;
-}
-.popup-slider-menu-item {
-    height: 1em;
-    min-width: 15em;
-    -slider-height: 0.3em;
-    -slider-background-color: #666666;
-    -slider-border-color: #555555;
-    -slider-active-background-color: #CCCCCC;
-    -slider-active-border-color: #DDDDDD;
-    -slider-border-width: 1px;
-    -slider-handle-radius: 0.5em;
-}
-.popup-device-menu-item {
-    spacing: .5em;
-}
-.popup-inactive-menu-item {
-    font-weight: normal;
-    color: #999;
-}
-.popup-subtitle-menu-item {
-    font-weight: bold;
-}
-.popup-menu-icon {
-    icon-size: 1.14em;
-}
-/* Switches (to be used in menus) */
-.toggle-switch {
-    width: 64px;
-    height: 22px;
-}
-.toggle-switch-us {
-    background-image: url("original-theme-assets/toggle-off-us.svg");
-}
-.toggle-switch-us:checked {
-    background-image: url("original-theme-assets/toggle-on-us.svg");
-}
-.toggle-switch-intl {
-    background-image: url("original-theme-assets/toggle-off-intl.svg");
-}
-.toggle-switch-intl:checked {
-    background-image: url("original-theme-assets/toggle-on-intl.svg");
-}
-.nm-menu-item-icons {
-    spacing: .5em;
-}
-/* ===================================================================
- * Panel (panel.js)
- * ===================================================================*/
-#panel {
-    color: #ffffff;
-    background-color: #555555;
-    font-weight: normal;
-    height: 26px;
-    width: 32px;
-}
-#panel:highlight {
-    background-color: #aa5555;
-}
-.panel-dummy {
-    background-color: rgba(50, 50, 50, 0.4);
-}
-.panel-dummy:entered {
-    background-color: rgba(255, 35, 35, 0.4);
-}
-.panelLeft {
-    spacing: 4px;
-}
-.panelCenter {
-    spacing: 4px;
-}
-.panelRight {
-    spacing: 4px;
-}
-.panelLeft:dnd {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,0,0,0.05);
-    background-gradient-end: rgba(255,0,0,0.2);
-}
-.panelCenter:dnd {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(0,255,0,0.05);
-    background-gradient-end: rgba(0,255,0,0.2);
-}
-.panelRight:dnd {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(0,0,255,0.05);
-    background-gradient-end: rgba(0,0,255,0.2);
-}
-.panelLeft:ltr {
-    padding-right: 4px;
-}
-.panelLeft:rtl {
-    padding-left: 4px;
-}
-.panelRight:ltr {
-    padding-left: 0px;
-    spacing: 0px;
-}
-.panelRight:rtl {
-    padding-right: 0px;
-    spacing: 0px;
-}
-.panelLeft.vertical {
-    padding: 0px;
-}
-.panelRight.vertical {
-    padding: 0px;
-}
-.panelCenter.vertical {
-    padding-left: 0px;
-    padding-right: 0px;
-}
-.panelLeft.vertical:dnd {
-}
-.panelCenter.vertical:dnd {
-}
-.panelRight.vertical:dnd {
-}
-.panel-top {
-}
-.panel-bottom {
-}
-.panel-left {
-}
-.panel-right {
-}
-.panel-status-button {
-    border: 0px solid #8b8b8b;
-    -natural-hpadding: 3px;
-    -minimum-hpadding: 3px;
-    font-weight: bold;
-    color: #ccc;
-    height: 22px;
-}
-.panel-status-button:hover {
-    color: white;
-}
-.system-status-icon {
-    padding-left: 0px;
-    padding-right: 0px;
-    spacing: 0px;
-    margin: 0px;
-}
-
-.panel-corner {
-    -panel-corner-radius: 0px;
-    -panel-corner-background-color: black;
-    -panel-corner-inner-border-width: 2px;
-    -panel-corner-inner-border-color: transparent;
-    -panel-corner-outer-border-width: 1px;
-    -panel-corner-outer-border-color: #536272;
-}
-.panel-corner:active,
-.panel-corner:overview,
-.panel-corner:focus {
-    -panel-corner-inner-border-color: rgba(255,255,255,0.8);
-}
-
-.panel-button #appMenuIcon {
-    app-icon-bottom-clip: 1px;
-}
-.panel-button:active #appMenuIcon,
-.panel-button:checked #appMenuIcon,
-.panel-button:focus #appMenuIcon {
-    app-icon-bottom-clip: 2px;
-}
-.panel-button {
-    -natural-hpadding: 6px;
-    -minimum-hpadding: 2px;
-    font-weight: bold;
-    color: #ccc;
-    transition-duration: 100;
-}
-.panel-button:hover {
-    color: white;
-    text-shadow: black 0px 2px 2px;
-}
-.panel-button:active,
-.panel-button:overview,
-.panel-button:focus {
-
-}
-.panel-button:active > .system-status-icon,
-.panel-button:checked > .system-status-icon,
-.panel-button:focus > .system-status-icon {
-    icon-shadow: black 0px 2px 2px;
-}
-.panel-menu {
-    -boxpointer-gap: 4px;
-}
-.popup-menu-item-dot {
-}
-.system-status-icon {
-    icon-size: 1.14em;
-}
-/* ===================================================================
- * Overview
- * ===================================================================*/
-#overview {
-    spacing: 12px;
-}
-
-.workspace-controls {
-    visible-height: 32px; /* Amount visible before hovering */
-}
-.workspace-thumbnails-background {
-    border: 1px solid rgba(128, 128, 128, 0.4);
-    border-right: 0px;
-    border-radius: 9px 9px 0px 0px;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 8px;
-}
-.workspace-thumbnails-background:rtl {
-    border-right: 1px;
-    border-left: 0px;
-    border-radius: 9px 9px 0px 0px;
-}
-.workspace-thumbnails {
-    spacing: 14px;
-}
-.workspace-add-button {
-    background-image: url("original-theme-assets/add-workspace.png");
-    height: 200px;
-    width: 35px;
-    transition-duration: 300;
-}
-.workspace-add-button:hover {
-    background-image: url("original-theme-assets/add-workspace-hover.png");
-    transition-duration: 300;
-}
-
-.workspace-close-button {
-    background-image: url("original-theme-assets/close-window.svg");
-    height: 34px;
-    width: 34px;
-    -cinnamon-close-overlap: 20px;
-}
-
-.workspace-thumbnail-indicator {
-    outline: 2px solid white;
-    border: 1px solid #888;
-}
-
-.window-caption {
-    background: rgba(85,85,85,0.8);
-    border: 2px solid #a5a5a5;
-    border-radius: 4px;
-    padding: .5em;
-    spacing: .5em;
-    -cinnamon-caption-spacing: 8px;
-    color: #ccc;
-    max-width: 20em;
-}
-.window-caption:focus {
-    color: #fff;
-}
-
-.window-border {
-    border: 3px #a5a5a5;
-    border-radius: 4px;
-    background-color: rgba(255,255,255,.05);
-    /* Cover rounded corners and some bad adjustment gaps */
-    box-shadow: 0 0 0 1px #a5a5a5 inset;
-}
-
-.window-close {
-    background-image: url("original-theme-assets/close-window.svg");
-    height: 28px;
-    width: 28px;
-    -cinnamon-close-overlap: 13px;
-}
-.window-close:hover {
-    background-image: url("original-theme-assets/close-window-hover.svg");
-}
-
-.window-close-area {
-    background-image: url("original-theme-assets/trash-icon.png");
-    background-size: 100px;
-    background-color: rgba(60, 60, 60, 0.8);
-    border: 4px solid rgba(128,128,128,0.8);
-    border-bottom-width: 0px;
-    border-radius: 20px 20px 0px 0px;
-    height: 120px;
-    width: 400px;
-}
-
-.overview-icon {
-    border-radius: 4px;
-    padding: 3px;
-    border: 1px rgba(0,0,0,0);
-    color: white;
-    transition-duration: 100;
-    text-align: center;
-}
-
-.overview-empty-placeholder {
-    color: #ffffff;
-    font-size: 2em;
-}
-
-.expo-background {
-    background-gradient-start: #000;
-    background-gradient-end: #AAA;
-    background-gradient-direction: vertical;
-}
-
-.workspace-overview-background-shade {
-    background-color: rgba(0,0,0,0.4);
-}
-
-.expo-workspace-thumbnail-frame {
-    border: 1px, rgba(64,64,64,0.9);
-    background-color: rgba(64,64,64,0.9);
-}
-
-.expo-workspace-thumbnail-frame#active {
-    border: 2px, rgba(32,32,32,0.9);
-    background-color: rgba(32,32,32,0.9);
-}
-
-/* ===================================================================
- * Looking Glass
- * ===================================================================*/
-#LookingGlassDialog {
-    background-color: rgba(85,85,85,0.85);
-    spacing: 4px;
-    padding: 4px;
-    border: 2px solid grey;
-    border-radius: 4px;
-    color: #CCCCCC;
-}
-/* ===================================================================
- * Date applet
- * ===================================================================*/
-/*calendar-background allows the date applet calendar to be themed separately from other applet menus*/
-.calendar-background {
-}
-
-.calendar-main-box {
-    margin: 0 .8em 0 .8em;
-}
-
-.calendar {
-    /*padding: 0 0.5em 0.4em;*/
-    spacing-rows: 0px;
-    spacing-columns: 0px;
-}
-
-.calendar-events-main-box {
-    height: 300px;
-    margin-right: 0.8em;
-    padding: .5em;
-    min-width: 350px;
-    border: 1px solid #666;
-    border-radius: 8px;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(85,85,85,0.8);
-    background-gradient-end: rgba(85,85,85,0.2);
-}
-
-.calendar-events-no-events-box {
-}
-
-.calendar-events-no-events-button {
-    margin: 6px 0 6px 0;
-    padding: 6px;
-    border-radius: 4px;
-}
-
-.calendar-events-no-events-button:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.2);
-    background-gradient-end: rgba(255,255,255,0.08);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.06);
-}
-
-.calendar-events-no-events-icon {
-    color: #cccccc;
-}
-
-.calendar-events-no-events-label {
-    font-size: 1.1em;
-    color: #cccccc;
-    font-weight: bold;
-    text-align: center;
-    margin-top: 10px;
-}
-
-.calendar-events-date-label {
-    padding: .2em 0 .75em .2em;
-    font-size: 1.1em;
-    color: #cccccc;
-    font-weight: bold;
-    text-align: center;
-}
-
-.calendar-events-event-container {
-    padding:  .1em;
-}
-
-.calendar-events-scrollbox {
-
-}
-
-.calendar-events-main-box .separator {
-    -margin-horizontal:  1em;
-    -gradient-height: 1px;
-    -gradient-start: #666666;
-    -gradient-end: #666666;
-}
-
-.calendar-event-button {
-    margin: 6px 0 6px 0;
-    border-radius: 4px;
-}
-
-.calendar-event-button:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.2);
-    background-gradient-end: rgba(255,255,255,0.08);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.06);
-}
-
-.calendar-event-color-strip {
-    width: 4px;
-    border-radius: 4px 0 0 4px;
-}
-
-.calendar-event-row-content {
-    margin:  7px;
-}
-
-.calendar-event-time-past {
-    color: rgba(204,204,204,.3);
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: .6em;
-}
-
-.calendar-event-time-present {
-    font-weight: bold;
-    text-align: left;
-    margin-bottom: .6em;
-}
-
-.calendar-event-time-present:all-day {
-    color: rgba(0,255,0,0.6);
-}
-
-.calendar-event-time-future {
-    text-align: left;
-    margin-bottom: .6em;
-}
-
-.calendar-event-countdown {
-    color: #cccccc;
-    font-weight: bold;
-    text-align: right;
-    margin-bottom: .6em;
-}
-
-.calendar-event-countdown:soon {
-    color: #ffffff;
-}
-
-.calendar-event-countdown:imminent {
-    color: rgba(255,255,0,0.6);
-}
-
-.calendar-event-countdown:current {
-    color: rgba(0,255,0,0.6);
-}
-
-.calendar-event-summary {
-    color: #cccccc;
-    text-align: left;
-    width: 200px;
-}
-
-.calendar-today-home-button,
-.calendar-today-home-button-enabled {
-    margin: 6px 0 6px 0;
-    padding: 6px;
-    border-radius: 4px;
-}
-
-.calendar-today-home-button-enabled:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.2);
-    background-gradient-end: rgba(255,255,255,0.08);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.06);
-}
-
-.calendar-today-day-label {
-    font-size: 1.75em;
-    color: #cccccc;
-    font-weight: bold;
-    text-align: center;
-    padding-bottom: .1em;
-}
-
-.calendar-today-date-label {
-    font-size: 1.1em;
-    color: #cccccc;
-    font-weight: bold;
-    text-align: center;
-}
-
-.calendar-month-label {
-    color: #cccccc;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    font-weight: bold;
-}
-.calendar-change-month-back {
-    width: 18px;
-    height: 12px;
-    background-image: url("original-theme-assets/calendar-arrow-left.svg");
-    border-radius: 4px;
-}
-.calendar-change-month-back:rtl {
-    background-image: url("original-theme-assets/calendar-arrow-right.svg");
-}
-.calendar-change-month-back:hover {
-    background-color: #999999;
-}
-.calendar-change-month-back:active {
-    background-color: #aaaaaa;
-}
-.calendar-change-month-forward {
-    width: 18px;
-    height: 12px;
-    background-image: url("original-theme-assets/calendar-arrow-right.svg");
-    border-radius: 4px;
-}
-.calendar-change-month-forward:rtl {
-    background-image: url("original-theme-assets/calendar-arrow-left.svg");
-}
-.calendar-change-month-forward:hover {
-    background-color: #999999;
-}
-.calendar-change-month-forward:active {
-    background-color: #aaaaaa;
-}
-
-.calendar-day-event-dot-box {
-    margin-top: 1.75em;
-
-    /* any other way do do something like this? */
-    max-rows: 1;
-}
-
-.calendar-day-event-dot {
-    margin: 1px;
-    border-radius: 2px;
-    width: 4px;
-    height: 4px;
-}
-
-.calendar-day-base {
-    text-align: center;
-    width: 2.4em;
-    height: 2.4em;
-}
-.calendar-day-base:hover {
-    color: #fff;
-    font-weight: bold;
-}
-.calendar-day-base:active {
-    background-color: #444444;
-}
-
-.calendar-day-heading {
-    color: #cccccc;
-    padding-top: 1em;
-}
-.calendar-week-number {
-    color: #cccccc;
-    font-weight: bold;
-}
-/* Hack used in lieu of border-collapse - see calendar.js */
-.calendar-day:ltr {
+    padding: 6px 9px;
     border: 1px solid #333333;
-    border-top-width: 0;
-    border-left-width: 0;
-}
-.calendar-day-top:ltr {
-    border-top-width: 1px;
-}
-.calendar-day-left:ltr {
-    border-left-width: 1px;
-}
-.calendar-day:rtl {
-    border: 1px solid #333333;
-    border-top-width: 0;
-    border-right-width: 0;
-}
-.calendar-day-top:rtl {
-    border-top-width: 1px;
-}
-.calendar-day-left:rtl {
-    border-right-width: 1px;
-}
-.calendar-work-day {
-}
-.calendar-nonwork-day {
-    background-color: rgba(128, 128, 128, 0.1);
-}
-.calendar-today {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.35);
-    background-gradient-end: rgba(255,255,255,0.15);
-    color: #cccccc;
-    font-weight: bold;
-}
-
-.calendar-today:selected {
-    color: #fff;
-}
-
-.calendar-other-month-day {
-    color: #888888;
-    background-color: rgba(64, 64, 64, 0.5);
-}
-
-.calendar-not-today {
-    color: #cccccc;
-}
-
-.calendar-not-today:selected {
-    color: #fff;
-    font-weight: bold;
-}
-
-
-/* ===================================================================
- * Notifications
- * ===================================================================*/
-#notification {
-    border-radius: 8px 8px 8px 8px;
-    border: 2px solid #a5a5a5;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(85,85,85,0.8);
-    background-gradient-end: rgba(85,85,85,0.8);
-    padding: 8px 8px 8px 8px;
-    spacing-rows: 10px;
-    spacing-columns: 10px;
-    margin-from-right-edge-of-screen: 20px;
-    width: 34em;
-    color: white;
-}
-#notification.multi-line-notification {
-    padding-bottom: 8px;
-    color: white;
-}
-/* We use row-span = 2 for the image cell, which prevents its height preferences to be
-    taken into account during allocation, so its height ends up being limited by the height
-    of the content in the other rows. To avoid showing a stretched image, we set the minimum
-    height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 = 159 */
-.notification-with-image {
-    min-height: 159px;
-    color: white;
-}
-#notification-scrollview {
-    max-height: 10em;
-}
-#notification-scrollview > .top-shadow, #notification-scrollview > .bottom-shadow {
-    height: 1em;
-}
-#notification-scrollview:ltr > StScrollBar {
-    padding-left: 6px;
-}
-#notification-scrollview:rtl > StScrollBar {
-    padding-right: 6px;
-}
-#notification-body {
-    spacing: 5px;
-}
-#notification-actions {
-    spacing: 10px;
-}
-.notification-button {
-    border-radius: 5px;
-    padding: 4px 8px 5px;
-}
-.notification-button:focus {
-    padding: 3px 8px 4px;
-}
-.notification-icon-button {
-    border-radius: 5px;
-    padding: 5px;
-}
-.notification-icon-button:focus {
-    padding: 4px;
-}
-.notification-icon-button > StIcon {
-    icon-size: 36px;
-}
-#notification StEntry {
-    padding: 4px;
-    border-radius: 4px;
-    color: #a8a8a8;
+    caret-color: white;
     selected-color: black;
-    border: 1px solid rgba(245,245,245,0.2);
-    background-gradient-direction: vertical;
-    background-gradient-start: rgb(200,200,200);
-    background-gradient-end: white;
-    transition-duration: 300;
-    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.6);
-    caret-color: #a8a8a8;
-    caret-size: 1px;
-}
-#notification StEntry:focus {
-    border: 1px solid #8b8b8b;
-    color: #333333;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgb(200,200,200);
-    background-gradient-end: white;
-    caret-color: #545454;
-    selection-background-color: #808080;
-}
-/* ===================================================================
- * Alt Tab
- * ===================================================================*/
-#altTabPopup {
-    padding: 8px;
-    spacing: 16px;
-}
-.switcher-list {
-    background: rgba(80,80,80,0.8);
-    border: 2px solid #a5a5a5;
+    selection-background-color: #3584e4;
+    caret-size: 1px; }
+  
+  .notification-icon-button, .notification-button, .keyboard-key, .sound-player StButton {
     border-radius: 8px;
-    padding: 20px;
+    padding: 6px 36px;
+    font-weight: bold; }
+  
+  .notification-icon-button, .notification-button, .keyboard-key, .sound-player StButton {
     color: white;
-    text-shadow: black 0px 0px 2px;
-}
-.switcher-list-item-container {
-    spacing: 8px;
-}
-.thumbnail-scroll-gradient-left {
+    background-color: #393939; }
+    .notification-icon-button:focus, .notification-button:focus, .keyboard-key:focus, .sound-player StButton:focus {
+      color: white;
+      background-color: #393939;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.4); }
+    .notification-icon-button:hover, .notification-button:hover, .keyboard-key:hover, .sound-player StButton:hover {
+      color: white;
+      background-color: #454545; }
+    .notification-icon-button:active, .notification-button:active, .keyboard-key:active, .sound-player StButton:active {
+      color: white;
+      background-color: #656565; }
+    .notification-icon-button:insensitive, .notification-button:insensitive, .keyboard-key:insensitive, .sound-player StButton:insensitive {
+      color: rgba(255, 255, 255, 0.5);
+      background-color: #313131; }
+  
+  .audio-device-selection-dialog .audio-selection-box .audio-selection-device, .polkit-dialog-user-combo, .sound-player StButton:small {
+    color: white;
+    background-color: #242424; }
+    .audio-device-selection-dialog .audio-selection-box .audio-selection-device:focus, .polkit-dialog-user-combo:focus, .sound-player StButton:focus:small {
+      color: white;
+      background-color: #242424;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.4); }
+    .audio-device-selection-dialog .audio-selection-box .audio-selection-device:hover, .polkit-dialog-user-combo:hover, .sound-player StButton:hover:small {
+      color: white;
+      background-color: #454545; }
+    .audio-device-selection-dialog .audio-selection-box .audio-selection-device:insensitive, .polkit-dialog-user-combo:insensitive, .sound-player StButton:insensitive:small {
+      color: rgba(255, 255, 255, 0.5);
+      background-color: #242424; }
+    .audio-device-selection-dialog .audio-selection-box .audio-selection-device:selected, .polkit-dialog-user-combo:selected, .sound-player StButton:selected:small, .audio-device-selection-dialog .audio-selection-box .audio-selection-device:active, .polkit-dialog-user-combo:active, .sound-player StButton:active:small {
+      color: white;
+      background-color: #656565; }
+    .audio-device-selection-dialog .audio-selection-box .audio-selection-device:checked, .polkit-dialog-user-combo:checked, .sound-player StButton:checked:small {
+      color: white;
+      background-color: #656565; }
+  
+  #menu-search-entry, .expo-workspaces-name-entry, .prompt-dialog-password-entry, .run-dialog-entry {
+    background-color: #393939;
+    color: white; }
+    #menu-search-entry:focus, .expo-workspaces-name-entry:focus, .prompt-dialog-password-entry:focus, .run-dialog-entry:focus {
+      background-color: #393939;
+      color: white;
+      border-color: #3584e4; }
+    #menu-search-entry:insensitive, .expo-workspaces-name-entry:insensitive, .prompt-dialog-password-entry:insensitive, .run-dialog-entry:insensitive {
+      background-color: #313131;
+      color: rgba(255, 255, 255, 0.5); }
+    #menu-search-entry StLabel.hint-text, .expo-workspaces-name-entry StLabel.hint-text, .prompt-dialog-password-entry StLabel.hint-text, .run-dialog-entry StLabel.hint-text {
+      color: rgba(255, 255, 255, 0.3); }
+    #menu-search-entry .capslock-warning, .expo-workspaces-name-entry .capslock-warning, .prompt-dialog-password-entry .capslock-warning, .run-dialog-entry .capslock-warning {
+      icon-size: 1.091em; }
+    #menu-search-entry StIcon.peek-password, .expo-workspaces-name-entry StIcon.peek-password, .prompt-dialog-password-entry StIcon.peek-password, .run-dialog-entry StIcon.peek-password {
+      icon-size: 16px;
+      color: white; }
+  
+  .dialog .dialog-button, .dialog .dialog-button:destructive-action, .dialog .dialog-button:default {
+    font-weight: bold;
+    padding: 12px;
+    border-radius: 12px;
+    color: white;
+    background-color: #393939; }
+    .dialog .dialog-button:focus {
+      color: white;
+      background-color: #393939;
+      box-shadow: inset 0 0 1px 1px rgba(255, 255, 255, 0.4); }
+    .dialog .dialog-button:hover {
+      color: white;
+      background-color: #454545; }
+    .dialog .dialog-button:active {
+      color: white;
+      background-color: #656565; }
+    .dialog .dialog-button:checked {
+      color: white;
+      background-color: #656565; }
+    .dialog .dialog-button:insensitive {
+      color: rgba(255, 255, 255, 0.5);
+      background-color: #313131; }
+  
+  .dialog .dialog-button:default {
+    color: white;
+    background-color: #3584e4; }
+    .dialog .dialog-button:hover:default {
+      color: white;
+      background-color: #629fea; }
+    .dialog .dialog-button:active:default {
+      color: white;
+      background-color: #1f76e1; }
+    .dialog .dialog-button:checked:default {
+      color: white;
+      background-color: #1f76e1; }
+    .dialog .dialog-button:insensitive:default {
+      border-color: #333333;
+      color: rgba(255, 255, 255, 0.5);
+      background-color: #313131; }
+  
+  .dialog .dialog-button:destructive-action {
+    color: white;
+    background-color: #c01c28; }
+    .dialog .dialog-button:hover:destructive-action {
+      color: white;
+      background-color: #e12e3b; }
+    .dialog .dialog-button:active:destructive-action {
+      color: white;
+      background-color: #aa1923; }
+    .dialog .dialog-button:checked:destructive-action {
+      color: white;
+      background-color: #aa1923; }
+    .dialog .dialog-button:insensitive:destructive-action {
+      border-color: #333333;
+      color: rgba(255, 255, 255, 0.5);
+      background-color: #313131; }
+  
+  .popup-combobox-item, .popup-sub-menu .popup-menu-item, .popup-menu-item {
+    font-weight: normal;
+    spacing: 6px;
+    transition-duration: 100ms;
+    padding: 8px 12px;
+    margin: 0 4px;
+    border-radius: 8px; }
+  
+  /* General Typography */
+  .overview-empty-placeholder {
+    font-weight: 300;
+    font-size: 2.182em; }
+  
+  .message-dialog-content .message-dialog-title, .dialog .confirm-dialog-title {
+    font-weight: 800;
+    font-size: 1.364em; }
+  
+  .calendar-events-no-events-label, .calendar-today-date-label {
+    font-weight: 700;
+    font-size: 1.364em; }
+  
+  .workspace-switch-osd, .media-keys-osd, .message-dialog-content .message-dialog-title.leightweight, .calendar-events-date-label, .calendar-today-day-label, .user-widget.vertical .user-widget-label {
+    font-weight: 700;
+    font-size: 1.182em; }
+  
+  .menu-selected-app-title, .popup-device-menu-item, .polkit-dialog-user-combo, .dialog-list .dialog-list-title, .calendar-event-time-future, .calendar-event-time-present:all-day, .calendar-event-time-present, .calendar-event-time-past, .calendar-month-label, .device-box .device-labels .primary-label {
+    font-weight: 700;
+    font-size: 1em; }
+  
+  .prompt-dialog-error-label, .prompt-dialog-info-label, .prompt-dialog-null-label, .run-dialog-description, .message-dialog-content .message-dialog-caption, .dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description, .calendar-event-countdown, .caps-lock-warning-label {
+    font-weight: 400;
+    font-size: 0.818em; }
+  
+  .popup-slider-menu-item, .slider {
+    height: 1em;
+    min-width: 15em;
+    -slider-height: 0.3em;
+    -slider-background-color: #393939;
+    -slider-active-background-color: white;
+    -slider-border-color: transparent;
+    -slider-active-border-color: transparent;
+    -slider-border-width: 1px;
+    -slider-handle-radius: 0.5em; }
+  
+  .resize-popup, .workspace-switch-osd, .info-osd, .media-keys-osd, #Tooltip, #LookingGlassDialog {
+    color: white;
+    background-color: rgba(36, 36, 36, 0.99);
+    border: 1px solid rgba(51, 51, 51, 0.99);
+    border-radius: 8px;
+    text-align: center;
+    padding: 24px; }
+  
+  #altTabPopup {
+    padding: 8px;
+    spacing: 16px; }
+  
+  .switcher-list {
+    background-color: #1a1a1a;
+    border: 1px solid #333333;
+    border-radius: 16px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5);
+    padding: 18px; }
+    .switcher-list-item-container {
+      spacing: 12px; }
+    .switcher-list .item-box {
+      padding: 8px;
+      border: 1px solid transparent;
+      border-radius: 8px;
+      background-color: transparent; }
+      .switcher-list .item-box:outlined {
+        border-color: red; }
+      .switcher-list .item-box:selected {
+        border-color: #333333;
+        background-color: #393939; }
+    .switcher-list .thumbnail-box {
+      padding: 0;
+      spacing: 4px; }
+    .switcher-list .thumbnail {
+      width: 256px; }
+  
+  .switcher-preview-backdrop {
+    background-color: rgba(0, 0, 0, 0.5); }
+  
+  .switcher-arrow {
+    background-color: transparent;
+    border-color: transparent;
+    color: white; }
+  
+  .thumbnail-scroll-gradient-left {
     background-gradient-direction: horizontal;
-    background-gradient-start: rgba(51, 51, 51, 1.0);
-    background-gradient-end: rgba(51, 51, 51, 0);
-    border-radius: 24px;
+    background-gradient-start: #1a1a1a;
+    background-gradient-end: rgba(26, 26, 26, 0);
+    border-radius: 16px;
     border-radius-topright: 0px;
     border-radius-bottomright: 0px;
-    width: 60px;
-}
-.thumbnail-scroll-gradient-right {
+    width: 60px; }
+  
+  .thumbnail-scroll-gradient-right {
     background-gradient-direction: horizontal;
-    background-gradient-start: rgba(51, 51, 51, 0);
-    background-gradient-end: rgba(51, 51, 51, 1.0);
-    border-radius: 24px;
+    background-gradient-start: rgba(26, 26, 26, 0);
+    background-gradient-end: #1a1a1a;
+    border-radius: 16px;
     border-radius-topleft: 0px;
     border-radius-bottomleft: 0px;
-    width: 60px;
-}
-.switcher-list .item-box {
-    padding: 8px;
-    border-radius: 8px;
-}
-.switcher-list .item-box:outlined {
-    padding: 6px;
-    border: 2px solid rgba(85,85,85,1.0);
-}
-.switcher-list .item-box:selected {
-    background: rgba(255,255,255,0.33);
-}
-.switcher-list .thumbnail-box {
-    padding: 2px;
-    spacing: 4px;
-}
-.switcher-list .thumbnail {
-    width: 256px;
-}
-.switcher-list .separator {
+    width: 60px; }
+  
+  .applet-box {
+    padding: 0 6px;
+    spacing: 6px;
+    text-align: center; }
+    .applet-box.vertical {
+      padding: 6px 0; }
+    .applet-box:hover {
+      background-color: #454545; }
+    .applet-box:highlight {
+      background-color: rgba(192, 28, 40, 0.5); }
+  
+  .applet-label {
+    font-weight: bold; }
+  
+  .applet-separator {
+    padding: 1px 4px; }
+    .applet-separator.vertical {
+      padding: 4px 1px; }
+  
+  .applet-separator-line {
     width: 1px;
-    background: rgba(255,255,255,0.33);
-}
-.ripple-box {
-    width: 104px;
-    height: 104px;
-    background-image: url("original-theme-assets/corner-ripple.png");
-}
-.ripple-box:rtl {
-    background-image: url("original-theme-assets/corner-ripple.png");
-}
-.switcher-arrow {
-    border-color: rgba(0,0,0,0);
-    color: #808080;
-}
-.switcher-arrow:highlighted {
-    border-color: rgba(0,0,0,0);
-    color: white;
-}
-.switcher-preview-backdrop {
-    background-color: rgba(25,25,25,0.65);
-}
-
-/* ===================================================================
- * Modal dialogs
- * ===================================================================*/
-.modal-dialog {
-    border-radius: 24px;
-    background-color: rgba(85, 85, 85, 0.9);
-    border: 2px solid #868686;
-    color: #babdb6;
-    padding-right: 42px;
-    padding-left: 42px;
-    padding-bottom: 30px;
-    padding-top: 30px;
-}
-.modal-dialog-button-box {
-    spacing: 21px;
-    padding-top: 21px;
-}
-.modal-dialog-button {
-    border-radius: 18px;
-    color: white;
-    margin-left: 10px;
-    margin-right: 10px;
-    padding: 4px 32px 5px;
-}
-.modal-dialog-button:disabled {
-    color: rgb(60, 60, 60);
-}
-.modal-dialog-button:focus {
-    padding: 3px 31px 4px;
-}
-
-.confirm-dialog-title {
-    text-align: center;
-    font-weight: bold;
-    font-size: 1.5em;
-    padding-bottom: 12px;
-}
-
-/* Info OSD popup */
-.info-osd {
-    font-size: 1.2em;
-    border-radius: 24px;
-    background-color: rgba(85, 85, 85, 0.9);
-    border: 2px solid #868686;
-    color: #babdb6;
-    padding-right: 20px;
-    padding-left: 20px;
-    padding-bottom: 20px;
-    padding-top: 20px;
-    text-align: center;
-}
-
-.workspace-osd {
-    color: #ffffff;
-    font-weight: bold;
-    font-size: 3em;
-}
-
-.monitor-label {
-    border-radius: 0;
-    color: #000000;
-    padding: 10px;
-    text-align: center;
-}
-
-/* ===================================================================
- * Run dialog
- * ===================================================================*/
-.run-dialog-label {
-    color: white;
-    padding-bottom: 15px;
-    text-align: center;
-    font-size: 1.5em;
-    font-weight: bold;
-}
-.run-dialog-description {
-    color: white;
-    padding-top: 15px;
-    text-align: center;
-}
-.run-dialog-description.error {
-    color: #fc4138;
-}
-.run-dialog-completion-box {
-    padding-left: 15px;
-}
-.run-dialog-entry {
-    font-weight: bold;
-    width: 23em;
-    color: white;
-    selection-background-color: white;
-    selected-color: black;
-}
-.run-dialog {
-    border-radius: 16px;
-    padding-right: 21px;
-    padding-left: 21px;
-    padding-bottom: 0;
-    padding-top: 15px;
-}
-.lightbox {
-    background-color: rgba(0, 0, 0, 0.4);
-}
-
-/* ===================================================================
- * Magnifier
- * ===================================================================*/
-
-.magnifier-zoom-region {
-    border: 2px solid rgba(128, 0, 0, 1);
-}
-.magnifier-zoom-region.full-screen {
-    border-width: 0px;
-}
-/* ===================================================================
- * On screen keyboard
- * ===================================================================*/
-
-#keyboard {
-    background-color: #555555;
-}
-.keyboard-layout {
-    spacing: 10px;
-    padding: 10px;
-}
-.keyboard-row {
-    spacing: 15px;
-}
-.keyboard-key {
-    min-height: 30px;
-    min-width: 30px;
-    background-gradient-start: rgba(255,245,245,0.4);
-    background-gradient-end: rgba(105,105,105,0.1);
-    background-gradient-direction: vertical;
-    font-size: 1.2em;
-    font-weight: bold;
-    border-radius: 10px;
-    border: 2px solid #a0a0a0;
-    color: white;
-}
-.keyboard-key:grayed {
-    color: #808080;
-    border-color: #808080;
-}
-.keyboard-key:checked,
-.keyboard-key:hover {
-    background: #303030;
-    border: 3px solid white;
-}
-.keyboard-key:active {
-    background: #808080;
-}
-.keyboard-subkeys {
-    color: white;
-    padding: 5px;
-    -arrow-border-radius: 10px;
-    -arrow-background-color: #090909;
-    -arrow-border-width: 2px;
-    -arrow-border-color: white;
-    -arrow-base: 20px;
-    -arrow-rise: 10px;
-    -boxpointer-gap: 5px;
-}
-/* ###################################################################
- * Cinnamon Specific Section
- * ###################################################################*/
-/* ===================================================================
- * Menu (menu.js)
- * ===================================================================*/
-/* Main menu title */
-/* menu-background allows the menu applet to be themed separately from other applet menus */
-.menu-background {
-}
-.menu-favorites-box {
-    padding: 0.8em;
-    border: 1px solid #666;
-    border-radius: 8px;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(85,85,85,0.8);
-    background-gradient-end: rgba(85,85,85,0.2);
-    transition-duration: 300;
-}
-.menu-favorites-button {
-    padding: 0.8em;
-}
-.menu-favorites-button:hover {
-    color: white;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.2);
-    background-gradient-end: rgba(255,255,255,0.08);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.06);
-    border-radius: 4px;
-}
-
-.menu-categories-box {
-    padding-top: 10px;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 10px;
-}
-.menu-applications-inner-box {
-    margin-top: 10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-bottom: 0px;
-}
-.menu-applications-outer-box {
-    padding-top: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 0px;
-}
-.menu-application-button {
-    padding-top: 7px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 7px;
-}
-.menu-application-button:highlighted {
-    /* This style is used in menu application buttons for applications which were newly installed */
-    font-weight: bold;
-}
-.menu-application-button-selected {
-    padding-top: 7px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 7px;
-    color: white;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.2);
-    background-gradient-end: rgba(255,255,255,0.08);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.06);
-    border-radius: 4px;
-}
-.menu-application-button-selected:highlighted {
-    /* This style is used in menu application buttons for applications which were newly installed */
-    font-weight: bold;
-}
-.menu-application-button-label:ltr {
-    padding-left: 5px;
-}
-.menu-application-button-label:rtl {
-    padding-right: 5px;
-}
-.menu-category-button {
-    padding-top: 7px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 7px;
-}
-.menu-category-button:hover {
-    background-color: rgba(128,128,128,0.2);
-    border-radius: 4px;
-    border-image: none;
-}
-.menu-category-button-greyed {
-    padding-top: 7px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 7px;
-    color: #9C9C9C;
-    font-style: italic;
-}
-.menu-category-button-greyed StIcon {
-	opacity: 0.5;
-}
-.menu-category-button-selected {
-    padding-top: 7px;
-    padding-left: 7px;
-    padding-right: 7px;
-    padding-bottom: 7px;
-    color: white;
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.2);
-    background-gradient-end: rgba(255,255,255,0.08);
-    box-shadow: inset 0px 0px 1px 1px rgba(255,255,255,0.06);
-    border-radius: 4px;
-}
-.menu-category-button-label:ltr {
-    padding-left: 5px;
-}
-.menu-category-button-label:rtl {
-    padding-right: 5px;
-}
-/* Name and description of the currently hovered item in the menu
- * This appears on the bottom right hand corner of the menu*/
-.menu-selected-app-box {
-    padding-right: 30px;
-    padding-left: 28px;
-    text-align: right;
-    height: 2.2em;
-}
-.menu-selected-app-box:rtl {
-    padding-top: 10px;
-    height: 2.2em;
-}
-.menu-selected-app-title {
-    font-weight: bold;
-}
-.menu-selected-app-description {
-    max-width: 150px;
-}
-.menu-top-box {
-    spacing: 10px;
-}
-.menu-systembuttons-box {
-}
-.menu-search-box:ltr {
-    padding-left: 30px;
-}
-.menu-search-box:rtl {
-    padding-right: 30px;
-}
-#menu-search-entry {
-    padding: 5px;
-    border-radius: 4px;
-    color: rgb(128, 128, 128);
-    border: 2px solid rgba(245,245,245,0.2);
-    background-gradient-start: rgba(5,5,6,0.1);
-    background-gradient-end: rgba(254,254,254,0.1);
-    background-gradient-direction: vertical;
-    selected-color: black;
-    caret-color: rgb(128, 128, 128);
-    caret-size: 1px;
-    width: 250px;
-    transition-duration: 300;
-    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.6);
-}
-#menu-search-entry:focus,
-#menu-search-entry:hover {
-    border: 2px solid rgb(136,138,133);
-    background-gradient-start: rgb(200,200,200);
-    background-gradient-end: white;
-    background-gradient-direction: vertical;
-}
-#menu-search-entry:hover {
-    transition-duration: 300;
-}
-#menu-search-entry:focus {
-    color: rgb(64, 64, 64);
-    font-weight: bold;
-    transition-duration: 0;
-}
-.menu-search-entry-icon {
-    icon-size: 1em;
-    color: #8d8f8a;
-}
-/* Context menu (at the moment only for favorites) */
-.menu-context-menu {
-}
-/* ===================================================================
- * Window list (windowList.js)
- * ===================================================================*/
-.window-list-box {
-    spacing: 2px;
-    padding-left: 10px;
-    padding-top: 0px;
-}
-.window-list-box.vertical {
-    spacing: 3px;
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.window-list-box.vertical #appMenuIcon {
-    padding-top: 3px;
-}
-.window-list-item-box {
-    color: rgba(255,255,255,1.0);
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.05);
-    background-gradient-end: rgba(255,255,255,0.2);
-    box-shadow: inset 0px 0px 1px 1px rgba(170,170,170,0.5);
-    border-radius: 2px 2px 0px 0px;
-    transition-duration: 100;
-    spacing: 0.5em;
-}
-.window-list-item-box.top {
-    border-radius: 0px 0px 2px 2px;
-}
-.window-list-item-box.left {
-    border-radius: 0px 2px 2px 0px;
-}
-.window-list-item-box.right {
-    border-radius: 2px 0px 0px 2px;
-}
-.window-list-item-box.top,
-.window-list-item-box.bottom {
-    padding: 0 0.5em;
-}
-.window-list-item-box:active,
-.window-list-item-box:checked,
-.window-list-item-box:focus,
-.window-list-item-box:running {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(226,226,226,0.5);
-    background-gradient-end: rgba(122,122,122,0.5);
-    box-shadow: inset 0px 0px 1px 1px rgba(170,170,170,0.5);
-}
-.window-list-item-box:hover {
-    box-shadow: inset 0px 0px 1px 1px rgba(170,170,170,1.0);
-}
-.window-list-item-demands-attention {
-    background-gradient-start: rgba(255,52,52,0.5);
-    background-gradient-end: rgba(255,144,144,0.5);
-}
-
-.window-list-item-box .progress {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.6);
-    background-gradient-end: rgba(255,255,255,0.3);
-    border-radius: 2px 2px 0px 0px;
-    box-shadow: inset 0px 0px 1px 1px rgba(170,170,170,0.5);
-}
-.panel-top .window-list-item-box .progress {
-    border-radius: 0px 0px 2px 2px;
-}
-.panel-left .window-list-item-box .progress {
-    border-radius: 0px 2px 2px 0px;
-}
-.panel-right .window-list-item-box .progress {
-    border-radius: 2px 0px 0px 2px;
-}
-
-.window-list-preview {
-    background: rgba(80,80,80,0.8);
-    border: 2px solid #a5a5a5;
-    border-radius: 8px;
-    color: white;
-    text-shadow: 0px 0px 2px black;
-    padding: 8px;
+    background: rgba(255, 255, 255, 0.2); }
+    .applet-separator-line-vertical {
+      height: 1px;
+      background: rgba(255, 255, 255, 0.2); }
+  
+  .applet-cornerbar {
+    width: 8px;
+    background-color: #454545;
+    border: 1px solid #333333; }
+    .applet-cornerbar.vertical {
+      height: 8px; }
+    .applet-cornerbar-box {
+      background: none; }
+  
+  .applet-cornerbar-box:hover > .applet-cornerbar {
+    background-color: #656565; }
+  
+  .notification-applet-padding {
+    padding: 4px 0 4px 4px; }
+  
+  .panel-launchers {
+    spacing: 2px; }
+    .panel-launchers .launcher {
+      padding: 0 2px; }
+      .panel-launchers .launcher:hover {
+        background-color: #454545; }
+    .panel-launchers.vertical {
+      padding: 2px 0; }
+      .panel-launchers.vertical .launcher {
+        padding: 2px 0; }
+  
+  .device-box .device-icon {
+    icon-size: 1.637em;
+    color: white; }
+  
+  .device-box .device-labels {
+    margin-left: 8px;
+    spacing: 4px; }
+    .device-box .device-labels .primary-label {
+      color: white; }
+    .device-box .device-labels .status-label {
+      color: #b2b2b2; }
+  
+  .sound-player > StBoxLayout:first-child {
     spacing: 4px;
-}
-
-/* ===================================================================
- * Grouped window list (grouped-window-list@cinnamon.org)
- * ===================================================================*/
-
-.grouped-window-list-box {
-    spacing: 2px;
-}
-.grouped-window-list-box.vertical {
-    spacing: 3px;
-}
-.grouped-window-list-thumbnail-label {
-    padding-left: 4px;
-}
-.grouped-window-list-number-label {
-    font-size: 10px;
-    z-index: 99;
-    text-shadow: 1px 0px 2px black;
-    color:#fff;
-    padding: 0;
-}
-.grouped-window-list-badge {
-    border-radius: 256px;
-    background-color: #000000;
-    margin: 0;
-}
-.grouped-window-list-button-label {
-    padding-left: 6px;
-    padding-right: 6px;
-}
-
-.grouped-window-list-thumbnail-alert {
-    background: rgba(255,52,52,0.3);
-}
-
-.grouped-window-list-item-box {
-    color: rgba(255,255,255,1.0);
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0);
-    background-gradient-end: rgba(255,255,255,0);
-    box-shadow: inset 0px 0px 1px 1px rgba(170,170,170,0);
-    border-radius: 2px 2px 0px 0px;
-    transition-duration: 100;
-    spacing: 0.5em;
-}
-.grouped-window-list-item-box.top {
-    border-radius: 0px 0px 2px 2px;
-}
-.grouped-window-list-item-box.left {
-    border-radius: 0px 2px 2px 0px;
-}
-.grouped-window-list-item-box.right {
-    border-radius: 2px 0px 0px 2px;
-}
-.grouped-window-list-item-box.top,
-.grouped-window-list-item-box.bottom {
-    padding: 0 0.5em;
-}
-
-.grouped-window-list-item-box:checked,
-.grouped-window-list-item-box:active:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(226,226,226,0.5);
-    background-gradient-end: rgba(122,122,122,0.5);
-    box-shadow: inset 0px 0px 1px 1px rgba(170,170,170,0.8);
-}
-
-.grouped-window-list-item-box:focus {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(226,226,226,0.5);
-    background-gradient-end: rgba(122,122,122,0.3);
-    box-shadow: inset 0px 0px 1px 1px rgba(170,170,170,0.9);
-}
-
-.grouped-window-list-item-box:active:focus:hover,
-.grouped-window-list-item-box:focus:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(226,226,226,0.3);
-    background-gradient-end: rgba(122,122,122,0.3);
-    box-shadow: inset 0px 0px 1px 1px rgba(170,170,170,1.0);
-}
-.grouped-window-list-item-box:hover {
-    box-shadow: inset 0px 0px 1px 1px rgba(170,170,170,0.5);
-}
-
-.grouped-window-list-item-box:active {
-    box-shadow: inset 0px 0px 1px 1px rgba(170,170,170,0.3);
-}
-
-.grouped-window-list-item-demands-attention {
-    background-gradient-start: rgba(255,52,52,0.5);
-    background-gradient-end: rgba(255,144,144,0.5);
-}
-
-.grouped-window-list-item-box .progress {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.6);
-    background-gradient-end: rgba(255,255,255,0.3);
-    border-radius: 2px 2px 0px 0px;
-    box-shadow: inset 0px 0px 1px 1px rgba(170,170,170,0.5);
-}
-.panel-top .grouped-window-list-item-box .progress {
-    border-radius: 0px 0px 2px 2px;
-}
-.panel-left .grouped-window-list-item-box .progress {
-    border-radius: 0px 2px 2px 0px;
-}
-.panel-right .grouped-window-list-item-box .progress {
-    border-radius: 2px 0px 0px 2px;
-}
-
-.grouped-window-list-thumbnail-menu {
-}
-.grouped-window-list-thumbnail-menu .item-box {
-    background: rgba(80,80,80,0.8);
-    border: 2px solid #a5a5a5;
-    color: white;
-    text-shadow: 0px 0px 2px black;
-    padding: 10px;
-    border-radius: 8px;
-    spacing: 4px;
-}
-.grouped-window-list-thumbnail-menu .item-box:outlined {
-    padding: 6px;
-    border: 2px solid rgba(165, 165, 165, 0.7)
-}
-.grouped-window-list-thumbnail-menu .item-box:selected {
-    background: rgba(110,110,110,0.8);
-}
-.grouped-window-list-thumbnail-menu .thumbnail {
-    width: 256px;
-}
-.grouped-window-list-thumbnail-menu .separator {
-    width: 1px;
-    background: rgba(255,255,255,0.33);
-}
-
-/* ===================================================================
- * Sound Applet (sound@cinnamon.org)
- * ===================================================================*/
-
-.sound-player StButton {
+    padding: 0 6px; }
+  
+  .sound-player StButton {
     width: 18px;
     height: 18px;
-    padding: 5px;
-    color: #aaa;
-}
-
-.sound-player StButton:small {
-    width: 16px;
-    height: 16px;
-}
-
-.sound-player StButton:small StIcon {
-    icon-size: 1.2em;
-}
-
-.sound-player StButton StIcon {
-    icon-size: 1.5em;
-}
-
-.sound-player StButton:hover, .sound-player StButton:active {
-    color: #fff;
-}
-
-.sound-player .slider {
-    height: 0.5em;
-    -slider-height: 0.5em;
-    -slider-background-color: #3c3c3c;
-    -slider-border-color: rgba(0,0,0,0);
-    -slider-active-background-color: #a5a5a5;
-    -slider-active-border-color: rgba(0,0,0,0);
-    -slider-border-width: 0px;
-    -slider-handle-radius: 0px;
-}
-
-.sound-player StBoxLayout {
-    spacing: 0.5em;
-}
-
-.sound-player>StBoxLayout {
-    padding: 0 16px 8px;
-}
-
-.sound-player-overlay {
-    width: 300px;
-    padding: 12px 16px;
-    spacing: 0.5em;
-    background-color: rgba(80,80,80,0.9);
-    color: #ffffff;
-    border-top: 2px solid #a5a5a5;
-}
-
-.sound-player-overlay StButton {
-    border-radius: 5px;
-    padding: 8px;
-}
-
-.sound-player-overlay StButton > StIcon {
-    icon-size: 16px;
-}
-
-.sound-player-overlay StBoxLayout {
-    padding-top: 2px;
-}
-
-.sound-player-generic-coverart {
-    background: rgba(0,0,0,0.2);
-}
-
-/* ===================================================================
- * Spacer applet
- * ===================================================================*/
-.spacer-box {
-    border-radius: 1px;
-    border: 1px solid transparent;
-}
-
-.spacer-box:highlight {
-    background-color: #aa5555;
-}
-
-.spacer-box.vertical {
-}
-
-.spacer-box.edit-mode {
-    border-radius: 1px;
-    border: 1px symbolic;
-}
-
-/* ===================================================================
- * Workspace Switcher applet (workspaceSwitcher.js)
- * ===================================================================*/
-/* Controls the styling when using the "Simple buttons" option */
-.panel-top .workspace-switcher,
-.panel-bottom .workspace-switcher {
-    padding: 0 3px;
-}
-
-.panel-left .workspace-switcher,
-.panel-right .workspace-switcher {
-    padding: 3px;
-}
-
-.workspace-button {
-    color: #cccccc;
-    border: 1px;
-    border-color: #a6a6a6;
-    padding: 0 8px;
-    transition-duration: 300;
-}
-
-.vertical .workspace-button {
-    padding: 4px 0;
-}
-
-.workspace-button:outlined {
-    background: #cccccc;
-    color: #555555;
-    box-shadow: inset 0px 0px 8px 1px rgba(255,255,255, 0.7);
-}
-
-.workspace-button:shaded {
-    color: #13191c;
-}
-
-/* Controls the style when using the "Visual representation" option */
-.workspace-graph {
-    padding: 3px;
-    spacing: 3px;
-}
-
-.workspace-graph .workspace {
-    border: 1px solid #666;
-    background-gradient-direction: vertical;
-    background-gradient-start: #222;
-    background-gradient-end: #4d4d4d;
-}
-
-.workspace-graph .workspace:active {
-    border: 1px solid #ccc;
-    background-gradient-direction: vertical;
-    background-gradient-start: #111;
-    background-gradient-end: #3d3d3d;
-}
-
-.workspace-graph .workspace .windows {
-    -active-window-background: rgba(140, 140, 140, 1.0);
-    -active-window-border: rgba(0, 0, 0, 0.7);
-    -inactive-window-background: rgba(140, 140, 140, 1.0);
-    -inactive-window-border: rgba(0, 0, 0, 0.7);
-}
-
-.workspace-graph .workspace:active .windows {
-    -active-window-background: rgba(255, 255, 255, 1.0);
-    -active-window-border: rgba(0, 0, 0, 0.9);
-    -inactive-window-background: rgba(140, 140, 140, 1.0);
-    -inactive-window-border: rgba(0, 0, 0, 0.7);
-}
-
-/* ===================================================================
- * Panel Launchers Applet (panelLaunchers.js)
- * ===================================================================*/
-.panel-launchers {
-    padding-left: 7px;
-    spacing: 2px;
-}
-
-.panel-launchers.vertical {
-    padding-top: 2px;
-    padding-bottom: 2px;
-    padding-left: 0px;
-    padding-right: 0px;
-    spacing: 3px;
-}
-
-.launcher {
-    padding-left: 1px;
-    padding-right: 1px;
-    border-bottom-width: 1px;
-    transition-duration: 300;
-}
-
-.launcher .icon-box {
-    padding-top: 2px;
-}
-
-.panel-launchers.vertical .launcher .icon-box {
-    padding-top: 0;
-}
-
-.panel-launchers .launcher:hover {
-    background-gradient-direction: vertical;
-    background-gradient-start: rgba(255,255,255,0.0);
-    background-gradient-end: rgba(255,255,255,0.2);
-    border: 0px solid rgba(255,255,255,0.5);
-    border-bottom-width: 1px;
-}
-
-/* ===================================================================
- * Overview corner
- * ===================================================================*/
-#overview-corner {
-    background-image: url("original-theme-assets/overview.png");
-}
-#overview-corner:hover {
-    background-image: url("original-theme-assets/overview-hover.png");
-}
-/* ===================================================================
- * Applets (applet.js)
- * ===================================================================*/
-.applet-separator {
-    padding: 5px 4px;
-}
-.applet-separator-line {
-    width: 2px;
-    background: rgba(255,255,255,0.5);
-}
-
-.applet-separator-line-vertical {
-    border: 0px solid rgba(255,255,255,0.5);
-    border-bottom-width: 2px;
-}
-
-.applet-cornerbar-box {
-    padding: 4px 4px;
-    background: rgba(255,255,255,0);
-}
-
-.applet-cornerbar {
-    width: 8px;
-    background: rgba(255,255,255,0.3);
-}
-
-.applet-cornerbar.vertical {
-    height: 8px;
-}
-
-.applet-cornerbar-box:hover > .applet-cornerbar {
-    background: rgba(255,255,255,0.4);
-}
-
-
-.applet-box {
-    padding-left: 3px;
-    padding-right: 3px;
-    color: #ccc;
-    text-shadow: black 0px 0px 2px;
-    transition-duration: 300;
+    padding: 6px; }
+    .sound-player StButton StIcon {
+      icon-size: 1em; }
+    .sound-player StButton:small {
+      width: 16px;
+      height: 16px; }
+      .sound-player StButton:small StIcon {
+        icon-size: 1.2 em; }
+  
+  .sound-player-generic-coverart {
+    background-color: rgba(0, 0, 0, 0.2); }
+  
+  .sound-player-overlay {
+    width: 290px;
+    padding: 12px;
+    spacing: 4px;
+    background-color: rgba(36, 36, 36, 0.9); }
+    .sound-player-overlay StBoxLayout {
+      padding-top: 2px; }
+    .sound-player-overlay > StBoxLayout {
+      spacing: 6px; }
+    .sound-player-overlay StBin > StBoxLayout {
+      spacing: 6px; }
+  
+  .sound-player .slider {
+    height: 6px;
+    -slider-height: 6px;
+    -slider-background-color: #232323;
+    -slider-active-background-color: white;
+    -slider-border-color: transparent;
+    -slider-active-border-color: transparent;
+    -slider-border-width: 0;
+    -slider-handle-radius: 0; }
+  
+  .spacer-box {
+    border: 1px solid transparent; }
+    .spacer-box:highlight {
+      background-color: #e4705b; }
+    .spacer-box.edit-mode {
+      border: 1px symbolic; }
+  
+  .systray {
+    padding: 0; }
+  
+  .panel-top .workspace-switcher,
+  .panel-bottom .workspace-switcher {
+    padding: 0 4px; }
+  
+  .workspace-button {
+    border: 1px solid #333333;
+    width: 2em;
+    color: #7c7c7c;
+    background-color: rgba(255, 255, 255, 0.05); }
+    .workspace-button.vertical {
+      height: 2em; }
+    .workspace-button:outlined {
+      background-color: #393939;
+      color: white; }
+      .workspace-button:outlined:hover {
+        background-color: #454545; }
+    .workspace-button:hover {
+      background-color: #393939; }
+    .workspace-button:shaded {
+      background-color: #171717; }
+  
+  .workspace-graph {
+    padding: 4px;
+    spacing: 4px; }
+    .workspace-graph .workspace {
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      background-color: #0d0d0d; }
+      .workspace-graph .workspace:active {
+        border-color: rgba(255, 255, 255, 0.5); }
+        .workspace-graph .workspace:active .windows {
+          -active-window-background: rgba(255, 255, 255, 0.3);
+          -active-window-border: rgba(255, 255, 255, 0.35);
+          -inactive-window-background: rgba(255, 255, 255, 0.1);
+          -inactive-window-border: rgba(255, 255, 255, 0.15); }
+      .workspace-graph .workspace .windows {
+        -active-window-background: rgba(255, 255, 255, 0.3);
+        -active-window-border: rgba(255, 255, 255, 0.35);
+        -inactive-window-background: rgba(255, 255, 255, 0.1);
+        -inactive-window-border: rgba(255, 255, 255, 0.15); }
+  
+  .system-status-icon {
+    icon-size: 1.091em; }
+  
+  .flashspot {
+    background-color: white; }
+  
+  .caps-lock-warning-label {
     text-align: center;
-}
-.panel-top .applet-box,
-.panel-bottom .applet-box {
-    spacing: 3px;
-}
-.applet-box:checked,
-.applet-box:hover {
-    color: #fff;
-}
-.applet-box.vertical {
-    padding-left: 0px;
-    padding-right: 0px;
-    padding-top: 3px;
-    padding-bottom: 3px;
-}
-.applet-box.vertical:hover {
-}
-.applet-box:highlight {
-    background-color: #aa5555;
-}
-.applet-label {
-    font-weight: bold;
-    color: #ccc;
-}
-.applet-box:checked > .applet-label,
-.applet-box:hover > .applet-label {
-    color: #fff;
-    text-shadow: white 0px 0px 5px;
-}
-.applet-box.vertical:hover > .applet-label {
-}
-.applet-icon {   /* symbolic icons will use system-status-icon instead */
-    color: #ccc;
-    icon-size: 22px;
-}
-.applet-box:checked .applet-icon,
-.applet-box:hover .applet-icon {
-    color: #fff;
-    icon-shadow: white 0px 0px 3px;
-}
-.applet-box.vertical:hover .applet-icon {
-}
-/* ===================================================================
- * Desklets (desklet.js)
- * ===================================================================*/
-.desklet {
-    color: #fff;
-}
-
-.desklet:highlight, .desklet:highlight-with-borders, .desklet:highlight-with-borders-and-header {
-    background-color: #aa5555;
-}
-
-.desklet-with-borders {
-    border: 2px solid #a5a5a5;
-    background-color: rgba(80, 80, 80, 0.8);
-    color: #fff;
-    border-radius-bottomleft: 12px;
-    border-radius-bottomright: 12px;
-    border-radius-topleft: 12px;
-    border-radius-topright: 12px;
-}
-
-.desklet-with-borders-and-header {
-    border: 2px solid #a5a5a5;
-    background-color: rgba(80, 80, 80, 0.8);
-    color: #fff;
-    border-top: 1px;
-    border-radius-bottomleft: 12px;
-    border-radius-bottomright: 12px;
-}
-
-.desklet-header {
-    border-radius-topleft: 12px;
-    border-radius-topright: 12px;
-    border: 2px solid #a5a5a5;
-    border-bottom: 0px;
-    background-color: rgba(80, 80, 80, 0.8);
-    color: #fff;
-    padding: 6px;
-}
-
-.desklet-drag-placeholder {
-    border: 2px solid #6daa00;
-    background-color: rgba(109,170, 0, 0.3);
-}
-
-/* ===================================================================
- * Clock Desklet (desklet.js)
- * ===================================================================*/
-.clock-desklet-label {
-}
-
-.expo-workspaces-name-entry {
-    padding: 5px;
-    border-radius: 4px;
-    color: rgb(200, 200, 200);
-    border: 2px solid rgb(136,138,133);
-    background-gradient-start: rgb(128,128,128);
-    background-gradient-end: rgb(85,85,85);
-    background-gradient-direction: vertical;
-    selected-color: black;
-    caret-color: rgb(128, 128, 128);
-    caret-size: 1px;
-    width: 250px;
-    height: 1em;
-    box-shadow: inset 0px 2px 4px rgba(0,0,0,0.6);
-    text-align: center;
-}
-
-.expo-workspaces-name-entry#selected {
-    background-gradient-start: rgb(200,200,200);
-    background-gradient-end: white;
-    font-weight: bold;
-    color: rgb(0, 0, 0);
-}
-
-.expo-workspaces-name-entry:focus {
-    color: rgb(0, 0, 0);
-    font-weight: bold;
-    font-style: italic;
-    transition-duration: 300;
-}
-
-/* ===================================================================
- * Notification Applet
- * ===================================================================*/
-
-.notification-applet-padding {
-    padding: .5em 1em;
-}
-
-.notification-applet-container {
-    max-height: 100px;
-}
-
-/* Check Boxes */
-.check-box CinnamonGenericContainer {
-    spacing: .2em;
-}
-
-.check-box StBin,
-.check-box:focus StBin {
-    width: 16px;
-    height: 16px;
-    background-image: url("original-theme-assets/checkbox-off.svg");
-}
-
-.check-box:checked StBin,
-.check-box:focus:checked StBin {
-    background-image: url("original-theme-assets/checkbox.svg");
-}
-
-.check-box StLabel {
-    font-weight: normal;
-}
-
-.radiobutton CinnamonGenericContainer {
-    spacing: .2em;
-    height: 18px;
-    padding-top: 2px;
-}
-
-.radiobutton StBin,
-.radiobutton:focus StBin {
-    width: 16px;
-    height: 16px;
-    background-image: url("original-theme-assets/radiobutton-off.svg");
-    border-radius: 15px;
-}
-
-.radiobutton:checked StBin,
-.radiobutton:focus:checked StBin {
-    background-image: url("original-theme-assets/radiobutton.svg");
-}
-
-.radiobutton StLabel {
-    padding-top: 4px;
-    box-shadow: none;
-}
-
-.flashspot {
-    background-color: white;
-}
-
-/* Media keys OSD popup */
-.osd-window {
-    background: rgba(80,80,80,0.8);
-    border: 2px solid #a5a5a5;
-    border-radius: 8px;
-    padding: 20px;
+    padding-bottom: 8px;
+    color: #f8e45c; }
+  
+  .cinnamon-link {
+    color: #1c71d8; }
+    .cinnamon-link:hover {
+      color: #418ce6; }
+  
+  .lightbox {
+    background-color: rgba(0, 0, 0, 0.4); }
+  
+  #LookingGlassDialog {
+    spacing: 4px; }
+  
+  .magnifier-zoom-region {
+    border: 2px solid #e4705b; }
+    .magnifier-zoom-region.full-screen {
+      border-width: 0; }
+  
+  .pie-timer {
+    width: 30px;
+    height: 30px;
+    -pie-border-width: 1px;
+    -pie-border-color: rgba(200, 200, 200, 0.8);
+    -pie-background-color: rgba(140, 140, 140, 0.6); }
+  
+  .ripple-pointer-location {
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #78aeed;
+    box-shadow: 0 0 2px 2px #a0a0a0; }
+  
+  .ripple-box {
+    width: 104px;
+    height: 104px;
+    background-image: url("original-theme-assets/corner-ripple.png"); }
+    .ripple-box:rtl {
+      background-image: url("original-theme-assets/corner-ripple.png"); }
+  
+  StScrollView.vfade {
+    -st-vfade-offset: 68px; }
+  
+  StScrollView StScrollBar {
+    min-height: 8px;
+    min-width: 8px; }
+  
+  StScrollBar StBin#trough {
+    background-color: rgba(48, 48, 48, 0.1);
+    border_radius: 8px; }
+  
+  StScrollBar StButton#vhandle,
+  StScrollBar StButton#hhandle {
+    background-color: #666666;
+    border-radius: 8px; }
+    StScrollBar StButton#vhandle:hover,
+    StScrollBar StButton#hhandle:hover {
+      background-color: #7c7c7c; }
+  
+  .separator {
+    -gradient-height: 1px;
+    -gradient-start: #333333;
+    -gradient-end: #333333;
+    -margin-horizontal: 0;
+    height: 1px; }
+  
+  .tile-preview {
+    background-color: rgba(120, 174, 237, 0.2);
+    border: 1px solid rgba(120, 174, 237, 0.7); }
+  
+  #Tooltip {
+    padding: 12px;
+    margin: 4px; }
+  
+  .user-icon {
+    background-size: contain;
+    border-radius: 99px;
     color: white;
-    spacing: 1em;
-}
-
-.osd-window .level {
-    height: 0.7em;
-    border-radius: 0.3em;
-    background-color: rgba(190,190,190,0.2);
-}
-
-.osd-window .level-bar {
-    border-radius: 0.3em;
-    background-color: rgba(190,190,190,0.8);
-}
-
-.tile-preview,
-.tile-hud {
-    background-color: rgba(85, 85, 85, 0.5);
-    border: 2px solid rgba(134, 134, 134, 0.8);
-}
-
-.tile-preview.snap,
-.tile-hud.snap {
-    background-color: rgba(134, 134, 170, 0.5);
-    border: 2px solid rgba(85, 85, 85, 0.8);
-}
-
-.tile-hud:top {
-    border-top-width: 0px;
-    border-radius: 0px 0px 8px 8px;
-}
-
-.tile-hud:bottom {
-    border-bottom-width: 0px;
-    border-radius: 8px 8px 0px 0px;
-}
-
-.tile-hud:left {
-    border-left-width: 0px;
-    border-radius: 0px 8px 8px 0px;
-}
-
-.tile-hud:right {
-    border-right-width: 0px;
-    border-radius: 8px 0px 0px 8px;
-}
-
-.tile-hud:top-left {
-    border-top-width: 0px;
-    border-left-width: 0px;
-    border-radius: 0px 0px 8px 0px;
-}
-
-.tile-hud:top-right {
-    border-top-width: 0px;
-    border-right-width: 0px;
-    border-radius: 0px 0px 0px 8px;
-}
-
-.tile-hud:bottom-left {
-    border-bottom-width: 0px;
-    border-left-width: 0px;
-    border-radius: 0px 8px 0px 0px;
-}
-
-.tile-hud:bottom-right {
-    border-bottom-width: 0px;
-    border-right-width: 0px;
-    border-radius: 8px 0px 0px 0px;
-}
-/* ===================================================================
- * Systray Applet
- *
- * .systray is for theming to be applied to the systray as a whole
- * .applet-box is used for indicators (not tray icons) within the systray
- * tray icons are not themed
- * ===================================================================*/
-.systray {
-    spacing: 5px;
-}
-
-/* Pointer accessibility notifications */
-.pie-timer {
-  width: 30px;
-  height: 30px;
-  -pie-border-width: 1px;
-  -pie-border-color: rgba(200, 200, 200, 0.8);
-  -pie-background-color: rgba(140, 140, 140, 0.6);;
-}
+    border-color: transparent;
+    background-color: rgba(255, 255, 255, 0.05); }
+    .user-icon StIcon {
+      padding: 12px; }
+    .user-icon.user-avatar {
+      border: 1px solid rgba(255, 255, 255, 0.5);
+      border-radius: 99px; }
+  
+  .user-widget.horizontal {
+    spacing: 6px; }
+  
+  .user-widget.vertical .user-widget-label {
+    color: white;
+    padding-top: 8px;
+    text-align: center; }
+  
+  .calendar {
+    margin-top: 20px;
+    spacing-rows: 2px;
+    spacing-columns: 2px; }
+    .calendar-main-box {
+      margin: 8px; }
+    .calendar-events-main-box {
+      height: 300px;
+      margin-right: 16px;
+      min-width: 350px;
+      border-right-width: 1px;
+      border-color: #333333; }
+    .calendar-today-home-button, .calendar-today-home-button-enabled {
+      margin-left: 12px; }
+    .calendar-today-day-label {
+      text-align: center; }
+    .calendar-change-month-back, .calendar-change-month-forward:rtl {
+      width: 16px;
+      height: 16px;
+      color: white;
+      background-image: url("original-theme-assets/calendar-arrow-left.svg"); }
+      .calendar-change-month-back:hover, .calendar-change-month-forward:rtl:hover {
+        background-image: url("original-theme-assets/calendar-arrow-left-hover.svg"); }
+    .calendar-change-month-forward, .calendar-change-month-back:rtl {
+      width: 16px;
+      height: 16px;
+      color: white;
+      background-image: url("original-theme-assets/calendar-arrow-right.svg"); }
+      .calendar-change-month-forward:hover, .calendar-change-month-back:rtl:hover {
+        background-image: url("original-theme-assets/calendar-arrow-right-hover.svg"); }
+    .calendar-day-event-dot-box {
+      margin-top: 1.7em;
+      max-rows: 1; }
+    .calendar-day-event-dot {
+      margin: 1px;
+      border-radius: 2px;
+      width: 4px;
+      height: 4px; }
+    .calendar-day-base {
+      text-align: center;
+      width: 2.4em;
+      height: 2.4em;
+      border-radius: 9999px;
+      color: #7c7c7c; }
+      .calendar-day-base:hover {
+        background-color: #454545; }
+    .calendar-day-heading {
+      color: white;
+      margin-top: 12px;
+      height: 1.6em; }
+    .calendar-work-day {
+      color: white; }
+    .calendar-nonwork-day {
+      color: white; }
+    .calendar-today {
+      box-shadow: inset 0 0 3px #3584e4;
+      background-color: #656565; }
+      .calendar-today:hover {
+        background-color: #454545; }
+    .calendar-other-month-day {
+      color: #7c7c7c; }
+    .calendar-not-today:selected {
+      background-color: #393939; }
+    .calendar-events-date-label {
+      text-align: center; }
+    .calendar-events-no-events-button {
+      margin: 6px 0;
+      padding: 6px;
+      border-radius: 8px;
+      color: #b2b2b2; }
+      .calendar-events-no-events-button:hover {
+        color: white; }
+    .calendar-events-no-events-icon {
+      color: rgba(255, 255, 255, 0.4);
+      icon-size: 128px; }
+    .calendar-events-no-events-label {
+      text-align: center;
+      margin-top: 16px; }
+    .calendar-events-scrollbox {
+      margin-top: 8px; }
+    .calendar-events-main-box .separator {
+      -margin-horizontal: 1em;
+      -gradient-height: 1px;
+      -gradient-start: transparent;
+      -gradient-end: transparent; }
+    .calendar-event-button {
+      margin: 3px 0;
+      border-radius: 8px;
+      border: 1px solid transparent; }
+      .calendar-event-button:hover {
+        background-color: #4a4a4a;
+        border-color: #333333; }
+    .calendar-event-color-strip {
+      width: 1px; }
+    .calendar-event-row-content {
+      margin: 7px; }
+    .calendar-event-time-past {
+      color: #7c7c7c; }
+    .calendar-event-time-present {
+      color: white; }
+    .calendar-event-time-present:all-day {
+      color: #78aeed; }
+    .calendar-event-countdown {
+      color: #b2b2b2; }
+      .calendar-event-countdown:soon {
+        color: #f8e45c; }
+      .calendar-event-countdown:imminent {
+        color: #e4705b; }
+      .calendar-event-countdown:current {
+        color: #8ff0a4; }
+    .calendar-event-time-future {
+      color: white; }
+    .calendar-event-summary {
+      color: #b2b2b2; }
+  
+  .desklet:highlight {
+    border: 2px solid #78aeed;
+    border-radius: 8px; }
+  
+  .desklet-with-borders {
+    border: 1px solid #333333;
+    border-radius: 8px;
+    background-color: rgba(36, 36, 36, 0.8); }
+  
+  .desklet-with-borders-and-header {
+    border: 1px solid #333333;
+    border-radius: 0 0 8px 8px;
+    border-top-width: 0;
+    background-color: rgba(36, 36, 36, 0.8);
+    padding: 12px; }
+  
+  .desklet-header {
+    border: 1px solid #333333;
+    border-radius: 8px 8px 0 0;
+    background-color: rgba(36, 36, 36, 0.8);
+    padding: 6px; }
+  
+  .desklet-drag-placeholder {
+    border: 1px solid red; }
+  
+  .photoframe-box {
+    border: 1px solid #333333;
+    border-radius: 8px;
+    background-color: rgba(36, 36, 36, 0.8);
+    padding: 6px; }
+  
+  .dialog {
+    background-color: #242424;
+    color: white;
+    border-radius: 18px;
+    border: 1px solid #333333;
+    padding: 18px; }
+    .dialog .dialog-content-box {
+      margin-top: 8px;
+      margin-bottom: 16px;
+      spacing: 32px;
+      max-width: 28em; }
+    .dialog .confirm-dialog-title {
+      text-align: center; }
+  
+  .dialog-list {
+    spacing: 18px; }
+    .dialog-list .dialog-list-title {
+      text-align: center; }
+    .dialog-list .dialog-list-scrollview {
+      max-height: 200px; }
+    .dialog-list .dialog-list-box {
+      spacing: 1em; }
+      .dialog-list .dialog-list-box .dialog-list-item {
+        spacing: 1em; }
+        .dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-title {
+          font-weight: bold; }
+        .dialog-list .dialog-list-box .dialog-list-item .dialog-list-item-description {
+          color: #f2f2f2; }
+  
+  .end-session-dialog {
+    width: 40em; }
+    .end-session-dialog .dialog-content-box {
+      spacing: 0; }
+    .end-session-dialog .dialog-list {
+      spacing: 0; }
+      .end-session-dialog .dialog-list .dialog-list-title {
+        color: #f8e45c;
+        background-color: tranparentize(#f8e45c, 0.9);
+        padding: 9px;
+        border-radius: 8px;
+        margin: 4px 0; }
+  
+  .message-dialog-content {
+    spacing: 18px; }
+    .message-dialog-content .message-dialog-title {
+      text-align: center; }
+    .message-dialog-content .message-dialog-description {
+      text-align: center; }
+    .message-dialog-content .message-dialog-caption {
+      text-align: center; }
+  
+  .run-dialog .dialog-content-box {
+    margin: 4px; }
+  
+  .run-dialog-description {
+    text-align: center;
+    color: #cccccc; }
+    .run-dialog-description.error {
+      color: #e4705b; }
+  
+  .run-dialog-completion-box {
+    padding-top: 6px;
+    padding-left: 12px; }
+  
+  .run-dialog-entry {
+    width: 20em;
+    height: 1.2em; }
+  
+  .prompt-dialog {
+    width: 26em; }
+    .prompt-dialog .dialog-content-box {
+      spacing: 16px;
+      margin-bottom: 12px; }
+    .prompt-dialog-password-entry {
+      width: 20em; }
+    .prompt-dialog-password-layout {
+      spacing: 8px; }
+    .prompt-dialog-error-label, .prompt-dialog-info-label, .prompt-dialog-null-label {
+      text-align: center; }
+    .prompt-dialog-error-label {
+      color: #e4705b; }
+  
+  .polkit-dialog-user-layout {
+    text-align: center;
+    spacing: 2px; }
+  
+  .polkit-dialog-user-combo {
+    border-radius: 8px;
+    padding: 6px 36px; }
+    .polkit-dialog-user-combo:insensitive {
+      color: white; }
+  
+  .audio-device-selection-dialog {
+    min-width: 24em; }
+    .audio-device-selection-dialog .audio-selection-box {
+      spacing: 12px; }
+      .audio-device-selection-dialog .audio-selection-box .audio-selection-device {
+        border-radius: 8px; }
+        .audio-device-selection-dialog .audio-selection-box .audio-selection-device .audio-selection-device-box {
+          padding: 12px;
+          spacing: 12px; }
+        .audio-device-selection-dialog .audio-selection-box .audio-selection-device .audio-selection-device-icon {
+          icon-size: 64px; }
+  
+  .workspace-thumbnails {
+    spacing: 26px; }
+  
+  .workspace-thumbnails-background {
+    padding: 8px; }
+  
+  .workspace-overview-background-shade {
+    background-color: rgba(0, 0, 0, 0.2); }
+  
+  .workspace-add-button {
+    background-image: url("original-theme-assets/add-workspace.svg");
+    height: 200px;
+    width: 35px;
+    transition-duration: 150; }
+    .workspace-add-button:hover {
+      background-image: url("original-theme-assets/add-workspace-hover.svg");
+      transition-duration: 150; }
+  
+  .workspace-close-button {
+    background-image: url("original-theme-assets/close.svg");
+    height: 26px;
+    width: 26px;
+    -cinnamon-close-overlap: 13px; }
+  
+  .expo-background {
+    background-color: #242424; }
+  
+  .expo-workspace-thumbnail-frame {
+    border: 1px solid #333333; }
+    .expo-workspace-thumbnail-frame#active {
+      border-color: #78aeed;
+      border-width: 2px; }
+  
+  .expo-workspaces-name-entry {
+    height: 1.5em; }
+  
+  .window-close-area {
+    background-image: url("original-theme-assets/trash-icon.svg");
+    height: 120px;
+    width: 400px; }
+  
+  .window-close {
+    background-image: url("original-theme-assets/close.svg");
+    height: 26px;
+    width: 26px;
+    -cinnamon-close-overlap: 13px; }
+  
+  .window-border {
+    border: 3px solid #3584e4;
+    border-radius: 8px; }
+  
+  .window-caption {
+    min-height: 22px;
+    border-radius: 8px;
+    padding: 6px 9px;
+    spacing: 4px;
+    border: 1px solid #333333;
+    background-color: #393939;
+    -cinnamon-caption-spacing: 6px; }
+    .window-caption:focus {
+      background-color: #656565; }
+  
+  #overview {
+    spacing: 12px; }
+  
+  #keyboard {
+    background-color: #242424; }
+  
+  .keyboard-layout {
+    padding: 6px;
+    spacing: 6px; }
+  
+  .keyboard-row {
+    spacing: 6px; }
+  
+  .keyboard-key {
+    min-height: 30px;
+    min-width: 30px;
+    font-size: 1.2em;
+    font-weight: bold; }
+    .keyboard-key:grayed {
+      color: rgba(255, 255, 255, 0.5);
+      background-color: #313131; }
+  
+  .keyboard-subkeys {
+    padding: 6px;
+    -arrow-border-radius: #333333;
+    -arrow-base: 20px;
+    -arrow-rise: 10px;
+    -boxpointer-gap: 0; }
+  
+  .menu {
+    min-width: 15em;
+    color: white;
+    margin: 6px; }
+  
+  .popup-menu-content {
+    padding: 6px;
+    background-color: #242424;
+    border-radius: 16px;
+    border: 1px solid #333333;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.5); }
+  
+  .popup-menu-item:active {
+    background-color: #393939; }
+  
+  .popup-menu-item:insensitive {
+    color: #7c7c7c;
+    background: none; }
+  
+  .popup-menu-arrow,
+  .popup-menu-icon {
+    icon-size: 1.091em; }
+  
+  .popup-sub-menu {
+    border-radius: 9px;
+    margin: 0 4px;
+    margin-bottom: 6px;
+    border: 1px solid rgba(0, 0, 0, 0.1); }
+    .popup-sub-menu .popup-menu-item {
+      border-radius: 0;
+      background-color: #303030;
+      margin: 0; }
+      .popup-sub-menu .popup-menu-item:active {
+        background-color: #444444; }
+      .popup-sub-menu .popup-menu-item:first-child {
+        border-radius: 8px 8px 0 0; }
+      .popup-sub-menu .popup-menu-item:last-child {
+        border-radius: 0 0 8px 8px; }
+      .popup-sub-menu .popup-menu-item:only-child, .popup-sub-menu .popup-menu-item:first-child:last-child {
+        border-radius: 8px; }
+    .popup-sub-menu StScrollBar {
+      padding: 4px; }
+      .popup-sub-menu StScrollBar StBin#trough, .popup-sub-menu StScrollBar StBin#vhandle {
+        border-width: 0; }
+  
+  .popup-separator-menu-item {
+    -gradient-height: 1px;
+    -gradient-start: #333333;
+    -gradient-end: #333333;
+    -margin-horizontal: 0;
+    height: 1px; }
+  
+  .popup-combo-menu {
+    padding: 6px;
+    background-color: #242424;
+    border-radius: 10px;
+    border: 1px solid #333333;
+    box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2); }
+  
+  .popup-combobox-item {
+    padding: 0 12px; }
+  
+  .popup-alternating-menu-item:alternate {
+    font-weight: normal; }
+  
+  .popup-device-menu-item {
+    spacing: .5em;
+    color: white; }
+    .popup-device-menu-item:insensitive {
+      color: white; }
+    .popup-device-menu-item .popup-inactive-menu-item {
+      font-weight: normal;
+      color: white; }
+  
+  .popup-subtitle-menu-item {
+    font-weight: normal; }
+  
+  .nm-menu-item-icons {
+    spacing: .5em; }
+  
+  .wireless-active:insensitive {
+    color: red; }
+  
+  #notification {
+    width: 34em;
+    border-radius: 8px;
+    border: 1px solid #333333;
+    box-shadow: 0 2px 4px 2px rgba(0, 0, 0, 0.5);
+    background-color: #242424;
+    padding: 12px;
+    margin-from-right-edge-of-screen: 20px;
+    spacing-rows: 10px;
+    spacing-columns: 10px; }
+    #notification.multi-line-notification {
+      padding-bottom: 12px;
+      color: white; }
+    #notification-body {
+      spacing: 6px; }
+    #notification-actions {
+      spacing: 12px; }
+  
+  .notification {
+    /* We use row-span = 2 for the image cell, which prevents its height preferences to be
+      taken into account during allocation, so its height ends up being limited by the height
+      of the content in the other rows. To avoid showing a stretched image, we set the minimum
+      height of the table to be ICON_SIZE + IMAGE_SIZE + spacing-rows = 24 + 125 + 10 = 159 */ }
+    .notification-with-image {
+      min-height: 159px; }
+    .notification-button {
+      padding: 6px 12px; }
+    .notification-icon-button {
+      padding: 6px; }
+  
+  .media-keys-osd {
+    margin-bottom: 1em;
+    border-radius: 9999px;
+    font-weight: bold;
+    spacing: 12px;
+    padding: 12px 24px; }
+    .media-keys-osd > * {
+      spacing: 12px; }
+    .media-keys-osd StIcon {
+      icon-size: 32px; }
+    .media-keys-osd StLabel:ltr {
+      margin-right: 6px; }
+    .media-keys-osd StLabel:rtl {
+      margin-left: 6px; }
+    .media-keys-osd .level {
+      min-width: 160px;
+      -barlevel-height: 6px;
+      -barlevel-background-color: #303030;
+      -barlevel-active-background-color: white;
+      -barlevel-amplify-color: #f8e45c;
+      -barlevel-amplify-separator-width: 3px; }
+      .media-keys-osd .level:ltr {
+        margin-right: 6px; }
+      .media-keys-osd .level:rtl {
+        margin-left: 6px; }
+    .media-keys-osd .level-bar {
+      border-radius: 8px;
+      background-color: white; }
+  
+  .info-osd {
+    font-size: 1.2em;
+    font-weight: 700;
+    text-align: center; }
+  
+  .workspace-switch-osd {
+    min-width: 140px;
+    margin-bottom: 1em;
+    border-radius: 9999px;
+    font-weight: bold;
+    padding: 12px 36px 0 36px; }
+    .workspace-switch-osd-indicator-box {
+      spacing: 12px; }
+    .workspace-switch-osd-indicator {
+      background-color: rgba(255, 255, 255, 0.5);
+      padding: 2.66667px;
+      margin: 13.33333px;
+      border-radius: 32px; }
+      .workspace-switch-osd-indicator:active {
+        background-color: #3584e4;
+        padding: 5.33333px;
+        margin: 10.66667px; }
+  
+  .monitor-label {
+    border-radius: 0;
+    color: black;
+    padding: 12px;
+    text-align: center; }
+  
+  .resize-popup {
+    padding: 12px; }
+  
+  .panel-top, .panel-bottom, .panel-left, .panel-right {
+    font-weight: bold;
+    color: white;
+    background-color: #1a1a1a; }
+  
+  .panelLeft {
+    spacing: 4px; }
+    .panelLeft:dnd {
+      background-color: rgba(255, 0, 0, 0.2); }
+    .panelLeft:ltr {
+      padding-right: 4px; }
+    .panelLeft:rtl {
+      padding-left: 4px; }
+    .panelLeft.vertical {
+      padding: 0; }
+      .panelLeft.vertical:ltr {
+        padding-right: 0px; }
+      .panelLeft.vertical:rtl {
+        padding-left: 0px; }
+  
+  .panelRight:dnd {
+    background-color: rgba(0, 0, 255, 0.2); }
+  
+  .panelRight:ltr {
+    padding-left: 4px;
+    spacing: 0; }
+  
+  .panelRight:rtl {
+    padding-right: 4px;
+    spacing: 0; }
+  
+  .panelRight.vertical {
+    padding: 0; }
+    .panelRight.vertical:ltr {
+      padding-left: 0;
+      spacing: 0; }
+    .panelRight.vertical:rtl {
+      padding-right: 0;
+      spacing: 0; }
+  
+  .panelCenter {
+    spacing: 4px; }
+    .panelCenter:dnd {
+      background-color: rgba(0, 255, 0, 0.2); }
+    .panelCenter.vertical {
+      padding-left: 0;
+      padding-right: 0; }
+  
+  .panel-top {
+    box-shadow: inset 0 -1px #333333; }
+  
+  .panel-bottom {
+    box-shadow: inset 0 1px #333333; }
+  
+  .panel-left {
+    box-shadow: inset -1px 0 #333333; }
+  
+  .panel-right {
+    box-shadow: inset 1px 0 #333333; }
+  
+  .panel-dummy {
+    background-color: rgba(228, 112, 91, 0.5); }
+    .panel-dummy:entered {
+      background-color: rgba(228, 112, 91, 0.6); }
+  
+  #panel:highlight {
+    background-color: #441b1e; }
+  
+  .menu-category-button-greyed, .menu-category-button-selected, .menu-category-button, .menu-application-button-selected, .menu-application-button {
+    padding: 6px;
+    spacing: 4px;
+    border-radius: 8px; }
+  
+  .menu-favorites-box {
+    padding: 9px;
+    background-color: #393939;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 8px; }
+  
+  .menu-favorites-button {
+    padding: 9px;
+    border-radius: 8px; }
+    .menu-favorites-button:hover {
+      background-color: #656565; }
+  
+  .menu-categories-box {
+    padding: 9px 24px; }
+  
+  .menu-applications-box {
+    padding: 9px; }
+  
+  .menu-applications-inner-box:ltr {
+    padding-left: 24px; }
+  
+  .menu-applications-inner-box:rtl {
+    padding-right: 24px; }
+  
+  .menu-application-button-label {
+    padding: 0; }
+  
+  .menu-application-button:highlighted {
+    font-weight: bold; }
+  
+  .menu-application-button-selected {
+    background-color: #393939; }
+    .menu-application-button-selected:highlighted {
+      font-weight: bold; }
+  
+  .menu-category-button-label {
+    padding: 0; }
+  
+  .menu-category-button:hover {
+    background-color: #454545; }
+  
+  .menu-category-button-selected {
+    background-color: #393939; }
+  
+  .menu-category-button-greyed {
+    color: #7c7c7c;
+    font-style: italic; }
+    .menu-category-button-greyed StIcon {
+      opacity: 0.5; }
+  
+  .menu-selected-app-box {
+    padding-right: 24px;
+    padding-left: 24px;
+    text-align: right; }
+  
+  .menu-selected-app-description {
+    color: #7c7c7c; }
+  
+  .menu-search-box {
+    padding: 0 0 6px 9px; }
+  
+  .menu-search-entry-icon {
+    icon-size: 1.091em; }
+  
+  .toggle-switch {
+    height: 26px;
+    width: 46px;
+    background-size: contain;
+    background-image: url("original-theme-assets/toggle-off.svg"); }
+    .toggle-switch:checked {
+      background-image: url("original-theme-assets/toggle-on.svg"); }
+  
+  .check-box CinnamonGenericContainer {
+    spacing: 0.8em; }
+  
+  .check-box StBin {
+    width: 20px;
+    height: 20px;
+    background-image: url("original-theme-assets/checkbox-off.svg"); }
+  
+  .check-box:focus StBin {
+    background-image: url("original-theme-assets/checkbox-off.svg"); }
+  
+  .check-box:checked StBin {
+    background-image: url("original-theme-assets/checkbox.svg"); }
+  
+  .check-box:focus:checked StBin {
+    background-image: url("original-theme-assets/checkbox.svg"); }
+  
+  .check-box-2 StBoxLayout {
+    spacing: 0.8em; }
+  
+  .check-box-2 StBin {
+    width: 20px;
+    height: 20px;
+    background-image: url("original-theme-assets/checkbox-off.svg"); }
+  
+  .check-box-2:focus StBin {
+    background-image: url("original-theme-assets/checkbox-off.svg"); }
+  
+  .check-box-2:checked StBin {
+    background-image: url("original-theme-assets/checkbox.svg"); }
+  
+  .check-box-2:focus:checked StBin {
+    background-image: url("original-theme-assets/checkbox.svg"); }
+  
+  .radiobutton CinnamonGenericContainer {
+    spacing: 0.8em; }
+  
+  .radiobutton StBin {
+    width: 20px;
+    height: 20px;
+    background-image: url("original-theme-assets/radio-off.svg"); }
+  
+  .radiobutton:focus StBin {
+    background-image: url("original-theme-assets/radio-off.svg"); }
+  
+  .radiobutton:checked StBin {
+    background-image: url("original-theme-assets/radio.svg"); }
+  
+  .radiobutton:focus:checked StBin {
+    background-image: url("original-theme-assets/radio.svg"); }
+  
+  .grouped-window-list-item-label {
+    width: 15em;
+    min-width: 5px; }
+  
+  .grouped-window-list-item-box {
+    padding: 0 6px; }
+    .grouped-window-list-item-box.top, .grouped-window-list-item-box.bottom {
+      border-bottom-width: 2px; }
+    .grouped-window-list-item-box.right {
+      padding-left: 0;
+      padding-right: 0;
+      border-right-width: 2px; }
+      .grouped-window-list-item-box.right StBin {
+        padding-right: 0; }
+    .grouped-window-list-item-box.left {
+      padding-left: 0;
+      padding-right: 0;
+      border-left-width: 2px; }
+      .grouped-window-list-item-box.left StBin {
+        padding-left: 1px; }
+    .grouped-window-list-item-box:hover {
+      background-color: #454545; }
+    .grouped-window-list-item-box:focus {
+      background-color: #656565; }
+    .grouped-window-list-item-box:active {
+      border-color: #3584e4; }
+    .grouped-window-list-item-box .progress {
+      background-color: rgba(143, 240, 164, 0.8); }
+  
+  .grouped-window-list-item-demands-attention {
+    background-color: #ff7b63; }
+  
+  .grouped-window-list-thumbnail-label {
+    padding-left: 4px; }
+  
+  .grouped-window-list-thumbnail-alert {
+    background: rgba(255, 123, 99, 0.3); }
+  
+  .grouped-window-list-thumbnail-menu {
+    border: 1px solid #333333;
+    background-color: #242424;
+    border-radius: 8px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5); }
+    .grouped-window-list-thumbnail-menu > StBoxLayout {
+      padding: 4px; }
+    .grouped-window-list-thumbnail-menu .item-box {
+      padding: 10px;
+      spacing: 4px; }
+      .grouped-window-list-thumbnail-menu .item-box:outlined {
+        border: 2px solid rgba(255, 255, 255, 0.5); }
+      .grouped-window-list-thumbnail-menu .item-box:selected {
+        background-color: #393939; }
+    .grouped-window-list-thumbnail-menu .thumbnail {
+      width: 256px; }
+    .grouped-window-list-thumbnail-menu .separator {
+      width: 1px;
+      background-color: #333333; }
+  
+  .grouped-window-list-button-label {
+    padding-left: 4px; }
+  
+  .grouped-window-list-number-label {
+    font-size: 0.8em;
+    z-index: 99; }
+  
+  .grouped-window-list-badge {
+    border-radius: 9999px;
+    background-color: #242424; }
+  
+  .window-list-box {
+    spacing: 6px;
+    padding-left: 6px;
+    padding-top: 1px; }
+    .window-list-box.vertical {
+      spacing: 4px;
+      padding: 6px 0; }
+    .window-list-box:highlight {
+      background-color: rgba(228, 112, 91, 0.5); }
+  
+  .window-list-item-box {
+    padding: 0 6px;
+    color: rgba(255, 255, 255, 0.8); }
+    .window-list-item-box.top, .window-list-item-box.bottom {
+      border-bottom-width: 2px; }
+      .window-list-item-box.top StLabel, .window-list-item-box.bottom StLabel {
+        padding-left: 2px; }
+    .window-list-item-box.right {
+      padding-left: 0;
+      padding-right: 0;
+      border-right-width: 2px; }
+      .window-list-item-box.right StBin {
+        padding-right: 0;
+        padding-left: 5px; }
+    .window-list-item-box.left {
+      padding-left: 0;
+      padding-right: 0;
+      border-left-width: 2px; }
+      .window-list-item-box.left StBin {
+        padding-left: 0;
+        padding-right: 5px; }
+    .window-list-item-box:hover {
+      background-color: #393939; }
+    .window-list-item-box:focus {
+      border-color: #3584e4;
+      background-color: #656565; }
+    .window-list-item-box .progress {
+      background-color: rgba(143, 240, 164, 0.8); }
+  
+  .window-list-item-demands-attention {
+    background-color: #ff7b63; }
+  
+  .window-list-preview {
+    border: 1px solid #333333;
+    background-color: #242424;
+    border-radius: 8px;
+    padding: 12px;
+    spacing: 4px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.5); }
+  
